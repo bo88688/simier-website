@@ -3,3 +3,4 @@ node_modules/
 thumbs/
 preview.html
 push.py
+add_i18n.py

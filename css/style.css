@@ -2648,3 +2648,12 @@ button {
     font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 }
+
+/* --- Lazy Load Background Images --- */
+.lazy-bg {
+  background-color: var(--color-stone);
+  transition: background-image 0.4s ease, opacity 0.4s ease;
+}
+.lazy-bg.lazy-loaded {
+  opacity: 1;
+}
