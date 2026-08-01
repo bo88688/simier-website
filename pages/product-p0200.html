@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMIER — Contemporary Living, Considered Well</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header header--scrolled" id="header">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo">SIMIER</a>
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__links">
+          <li><a href="../index.html#catalog">产品</a></li>
+          <li><a href="../index.html#about">关于</a></li>
+          <li><a href="../index.html#destinations">足迹</a></li>
+          <li><a href="../index.html#lookbook">画册</a></li>
+          <li><a href="../index.html#journal">日志</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button>
+        <button class="header__icon-btn header__icon-btn--cart" aria-label="购物车" onclick="location.href='cart.html'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></button>
+        <button class="header__menu-toggle" id="menuToggle" aria-label="菜单"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-detail__grid">
+          <div class="product-detail__image">
+            <img src="../assets/桌几/IMG_0200.JPG" alt="见山 · 玄关案">
+          </div>
+          <div class="product-detail__info">
+            <p class="product-detail__breadcrumb"><a href="../index.html" data-i18n="breadcrumb.home">首页</a> / <a href="storage.html">柜类 & 桌几</a></p>
+            <h1 class="product-detail__name" data-i18n="p0200.name">见山 · 玄关案</h1>
+            <p class="product-detail__price">$500</p>
+            <div class="product-detail__desc">
+              <p data-i18n="p0200.desc">进门的第一个画面。窄长设计适配走廊和玄关，放钥匙、拆快递、摆一束花——回家的仪式感。</p>
+            </div>
+            <div class="product-detail__specs">
+              <div class="spec"><span class="spec__label" data-i18n="product.material">材质</span><span class="spec__value">樱桃木实木 / 环保清漆 / 不锈钢拉丝腿</span></div>
+              <div class="spec"><span class="spec__label" data-i18n="product.size">尺寸</span><span class="spec__value">W100 × D35 × H78 cm</span></div>
+              <div class="spec"><span class="spec__label" data-i18n="product.shipping">发货</span><span class="spec__value">Foshan, Guangdong, China · Global Shipping · 7–15 Business Days</span></div>
+            </div>
+            <div class="product-detail__actions">
+              <a href="#" class="btn btn--primary btn--add-cart" data-name="见山 · 玄关案" data-price="$500" data-image="../assets/桌几/IMG_0200.JPG" data-i18n="cart.add">加入购物车</a>
+              <a href="#" class="btn btn--secondary" onclick="openChat();return false;" data-i18n="cart.contact">咨询客服</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-detail__related">
+          <h3 class="product-detail__related-title"><span data-i18n="product.related">同系列推荐</span></h3>
+          <div class="featured__grid" style="margin-top:1.5rem">
+            <article class="product-card">
+              <a href="product-p0193.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('../assets/柜类/IMG_0193.JPG')"></div>
+                  <div class="product-card__hover"><span class="btn btn--outline" data-i18n="cart.view">查看详情</span></div>
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">藏山 · 边柜</h3>
+                  <p class="product-card__price">$725</p>
+                </div>
+              </a>
+            </article>
+            <article class="product-card">
+              <a href="product-p0197.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('../assets/桌几/IMG_0197.JPG')"></div>
+                  <div class="product-card__hover"><span class="btn btn--outline">查看详情</span></div>
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">月相 · 圆几</h3>
+                  <p class="product-card__price">$415</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox__close" id="lightboxClose">&times;</span>
+      <img src="" alt="" id="lightboxImg">
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="footer__logo">SIMIER</a>
+          <p class="footer__tagline">Made with intention.<br>Crafted in our Guangdong workshop.</p>
+          <div class="footer__social"><a href="#">IG</a><a href="#">PI</a><a href="#">RED</a></div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.products">产品</h4>
+          <ul class="footer__links">
+            <li><a href="../pages/seating.html">沙发 & 单椅</a></li>
+            <li><a href="../pages/dining.html">餐桌 & 餐椅</a></li>
+            <li><a href="../pages/bedroom.html">床</a></li>
+            <li><a href="../pages/storage.html">柜类 & 桌几</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.about">关于 SIMIER</h4>
+          <ul class="footer__links"><li><a href="#">品牌故事</a></li><li><a href="factory.html">工厂探访</a></li><li><a href="#">全球足迹</a></li><li><a href="#">学生折扣计划</a></li><li><a href="#">加入我们</a></li></ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.support">服务</h4>
+          <ul class="footer__links"><li><a href="#">联系我们</a></li><li><a href="#">全球配送</a></li><li><a href="#">养护指南</a></li><li><a href="#">B2B 合作</a></li><li><a href="#">常见问题</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SIMIER 森怡家具（广东）有限公司. 保留所有权利。</p>
+        <p class="footer__location">Foshan, Guangdong, China &mdash; 南法 &mdash; 加州 &mdash; 伊斯坦布尔</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+
+  <!-- ===== FLOATING AI CHAT WIDGET ===== -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-widget__bubble" id="chatBubble" aria-label="Chat with us">
+      <span class="chat-widget__emoji">💬</span>
+      <span class="chat-widget__pulse"></span>
+    </button>
+    <div class="chat-widget__panel" id="chatPanel">
+      <div class="chat-widget__header">
+        <div class="chat-widget__avatar">🛋️</div>
+        <div>
+          <p class="chat-widget__name">SIMIER Assistant</p>
+          <p class="chat-widget__status">Online · Ready to help</p>
+        </div>
+        <button class="chat-widget__close" id="chatClose">&times;</button>
+      </div>
+      <div class="chat-widget__messages" id="chatMessages">
+        <div class="chat-widget__msg chat-widget__msg--bot">
+          <p>Hey there! 👋 I am your SIMIER design assistant. Ask me anything — fabric options, sizing, shipping, student discounts, or just say hi!</p>
+        </div>
+      </div>
+      <div class="chat-widget__quick" id="chatQuick">
+        <button class="chat-widget__quick-btn" data-q="What sofas fit a small apartment?">🛋️ Small apartment sofa?</button>
+        <button class="chat-widget__quick-btn" data-q="Do you have student discounts?">🎓 Student discounts?</button>
+        <button class="chat-widget__quick-btn" data-q="How long does shipping take?">🚚 Shipping time?</button>
+      </div>
+      <form class="chat-widget__input" id="chatInputForm">
+        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off">
+        <button type="submit">➤</button>
+      </form>
+    </div>
+  </div>
+  <script src="../js/cart.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/chat.js"></script>
+</body>
+</html>

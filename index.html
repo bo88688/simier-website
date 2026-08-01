@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quality materials. Clean lines. Designed for modern homes and real routines. Discover furniture and home goods made with intention.">
+  <title>Contemporary Living, Considered Well — SIMIER</title>
+  <link rel="canonical" href="https://www.simier.top/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">SIMIER</a>
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__links">
+          <li><a href="pages/seating.html" class="header__link" data-i18n="nav.products">产品</a></li>
+          <li><a href="#about" class="header__link" data-i18n="nav.about">关于</a></li>
+          <li><a href="#destinations" class="header__link" data-i18n="nav.destinations">足迹</a></li>
+          <li><a href="#lookbook" class="header__link" data-i18n="nav.lookbook">画册</a></li>
+          <li><a href="#journal" class="header__link" data-i18n="nav.journal">日志</a></li>
+          <li><a href="#contact" class="header__link" data-i18n="nav.contact">联系</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__icon-btn" aria-label="搜索">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="header__icon-btn header__icon-btn--cart" aria-label="购物车" onclick="location.href='pages/cart.html'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </button>
+        <button class="header__menu-toggle" id="menuToggle" aria-label="菜单">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal" data-i18n="hero.eyebrow">Guangdong SIMIER Home Furnishing Co., Ltd.</p>
+          <h1 class="hero__title reveal" data-i18n="hero.title">Contemporary Living<br>Considered Well</h1>
+          <p class="hero__subtitle reveal" data-i18n="hero.subtitle">Quality materials, clean lines — designed for modern homes and real routines</p>
+          <a href="pages/seating.html" class="btn btn--primary reveal" data-i18n="hero.cta">Explore the Collection</a>
+          <p class="hero__cta-note reveal" data-i18n="hero.shipping">Free shipping on orders over $1,390</p>
+        </div>
+        <div class="hero__image reveal">
+          <img src="assets/坐具/IMG_4002.JPG" alt="SIMIER Atelier">
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ===== BRAND PILLARS ===== -->
+    <section class="pillars" id="about">
+      <div class="container">
+        <div class="pillars__grid">
+          <div class="pillar reveal">
+            <p class="pillar__number">01</p>
+            <h3 class="pillar__title" data-i18n="pillar1.title">Guangdong Atelier</h3>
+            <p class="pillar__text" data-i18n="pillar1.text">Decades of artisanal heritage in the Pearl River Delta. Every piece bears the mark of master craftsmanship — where precise manufacturing becomes a language of design in its own right.</p>
+          </div>
+          <div class="pillar reveal">
+            <p class="pillar__number">02</p>
+            <h3 class="pillar__title" data-i18n="pillar2.title">For the First Home</h3>
+            <p class="pillar__text" data-i18n="pillar2.text">The first apartment deserves furniture with intention. Designed for compact urban spaces and student living across the world's great cities — refined, accessible, and made to move with you.</p>
+          </div>
+          <div class="pillar reveal">
+            <p class="pillar__number">03</p>
+            <h3 class="pillar__title" data-i18n="pillar3.title">Three Seas, One Vision</h3>
+            <p class="pillar__text" data-i18n="pillar3.text">From Provençal light to California coast, from the Bosphorus to Shanghai — SIMIER pieces find their place in the lives of a global generation, united by an appreciation for objects made with care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow" data-i18n="categories.eyebrow">The Collection</p>
+          <h2 class="section-header__title" data-i18n="categories.title">Browse by Typology</h2>
+        </div>
+        <div class="categories__grid">
+          <a href="pages/seating.html" class="category-card reveal">
+            <div class="category-card__image" style="background-image: url('assets/坐具/IMG_0210.jpg')"></div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__content">
+              <h3 class="category-card__title" data-i18n="cat.seating">沙发 & 单椅</h3>
+              <span class="category-card__link" data-i18n="cat.seating.sub">单人 · 双人 · 多人 &rarr;</span>
+            </div>
+          </a>
+          <a href="pages/dining.html" class="category-card reveal">
+            <div class="category-card__image" style="background-image: url('assets/餐厅/IMG_0194.JPG')"></div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__content">
+              <h3 class="category-card__title" data-i18n="cat.dining">餐桌 & 餐椅</h3>
+              <span class="category-card__link" data-i18n="cat.dining.sub">2人 · 4人 · 6人 &rarr;</span>
+            </div>
+          </a>
+          <a href="pages/bedroom.html" class="category-card reveal">
+            <div class="category-card__image" style="background-image: url('assets/卧室/IMG_0196.JPG')"></div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__content">
+              <h3 class="category-card__title" data-i18n="cat.bedroom">床</h3>
+              <span class="category-card__link" data-i18n="cat.bedroom.sub">单人 · 双人 · 公寓款 &rarr;</span>
+            </div>
+          </a>
+          <a href="pages/storage.html" class="category-card reveal">
+            <div class="category-card__image" style="background-image: url('assets/柜类/IMG_0193.JPG')"></div>
+            <div class="category-card__overlay"></div>
+            <div class="category-card__content">
+              <h3 class="category-card__title" data-i18n="cat.storage">柜类 & 桌几</h3>
+              <span class="category-card__link" data-i18n="cat.storage.sub">收纳 · 边柜 · 茶几 &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GLOBAL DESTINATIONS ===== -->
+    <section class="destinations" id="destinations">
+      <div class="about__grid">
+        <div class="about__image reveal">
+          <div class="about__image-inner" style="background-image: url('assets/餐厅/IMG_0198.JPG')"></div>
+        </div>
+        <div class="about__text reveal">
+          <p class="section-header__eyebrow" data-i18n="dest.eyebrow">Global Presence</p>
+          <h2 class="about__title" data-i18n="dest.title">Three Seas<br>One Vision</h2>
+          <div class="destination__list">
+            <div class="destination">
+              <h4 class="destination__name">South of France &mdash; Sud de la France</h4>
+              <p class="destination__desc">Provençal light through shuttered windows, falling across a SIMIER linen sofa. From Montpellier to Marseille, our pieces inhabit student apartments where afternoon sunlight is a way of life.</p>
+            </div>
+            <div class="destination">
+              <h4 class="destination__name">California Coast &mdash; United States</h4>
+              <p class="destination__desc">Los Angeles, Santa Barbara, Irvine — in the apartments that surround California's university towns, SIMIER is the first piece of furniture in the first real home. Sun, coastline, and a well-made sofa: the essentials of young Californian life.</p>
+            </div>
+            <div class="destination">
+              <h4 class="destination__name">Bosphorus &mdash; Türkiye</h4>
+              <p class="destination__desc">From Istanbul to Ankara, spanning two continents. The Turkish sensibility for colour and texture finds its match in every SIMIER piece — a natural affinity between craft traditions that span East and West.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FULL PRODUCT CATALOG ===== -->
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow" data-i18n="catalog.eyebrow">Full Collection</p>
+          <h2 class="section-header__title">The Catalogue</h2>
+          <p class="section-header__subtitle">Shipped directly from our Guangdong atelier to the world. Every piece passes 27 quality inspections before it leaves our hands.</p>
+        </div>
+      </div>
+      <div class="catalog__category" id="cat-seating">
+        <div class="container">
+          <div class="catalog__header reveal">
+            <p class="catalog__count">4 件作品</p>
+            <h3 class="catalog__title">沙发 & 单椅</h3>
+            <p class="catalog__subtitle">从普罗旺斯到加州海岸，一张好沙发是年轻人第一个家的灵魂。</p>
+          </div>
+          <div class="featured__grid">
+            <article class="product-card reveal">
+              <a href="pages/product-p0195.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/坐具/IMG_0195.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-p0199.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/坐具/IMG_0199.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-p0210.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/坐具/IMG_0210.jpg')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-pcurved.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/坐具/IMG_0199.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__category" id="cat-dining">
+        <div class="container">
+          <div class="catalog__header reveal">
+            <p class="catalog__count">2 件作品</p>
+            <h3 class="catalog__title">餐桌 & 餐椅</h3>
+            <p class="catalog__subtitle">一张好餐桌是合租公寓的社交中心。</p>
+          </div>
+          <div class="featured__grid">
+            <article class="product-card reveal">
+              <a href="pages/product-p0194.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/餐厅/IMG_0194.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-p0198.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/餐厅/IMG_0198.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__category" id="cat-bedroom">
+        <div class="container">
+          <div class="catalog__header reveal">
+            <p class="catalog__count">1 件作品</p>
+            <h3 class="catalog__title">床</h3>
+            <p class="catalog__subtitle">休息得好，才有力气改变世界。</p>
+          </div>
+          <div class="featured__grid">
+            <article class="product-card reveal">
+              <a href="pages/product-p0196.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/卧室/IMG_0196.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__category" id="cat-storage">
+        <div class="container">
+          <div class="catalog__header reveal">
+            <p class="catalog__count">3 件作品</p>
+            <h3 class="catalog__title">柜类 & 桌几</h3>
+            <p class="catalog__subtitle">小空间的大智慧。</p>
+          </div>
+          <div class="featured__grid">
+            <article class="product-card reveal">
+              <a href="pages/product-p0193.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/柜类/IMG_0193.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-p0197.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/桌几/IMG_0197.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal">
+              <a href="pages/product-p0200.html" class="product-card__link">
+                <div class="product-card__image-wrap">
+                  <div class="product-card__image" style="background-image: url('assets/桌几/IMG_0200.JPG')"></div>
+                  <div class="product-card__hover">
+                    <span class="btn btn--outline">快速浏览</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section><!-- /catalog -->
+    <!-- ===== LOOKBOOK ===== -->
+    <section class="lookbook" id="lookbook">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow" data-i18n="lookbook.eyebrow">Inspiration</p>
+          <h2 class="section-header__title">The Lookbook</h2>
+          <p class="section-header__subtitle">Provençal light &middot; Californian blue &middot; Bosphorus dusk<br>SIMIER in the homes of a global generation</p>
+        </div>
+      </div>
+      <div class="lookbook__grid reveal">
+        <div class="lookbook__item lookbook__item--tall" style="background-image: url('assets/坐具/IMG_0210.jpg')"></div>
+        <div class="lookbook__item" style="background-image: url('assets/餐厅/IMG_0194.JPG')"></div>
+        <div class="lookbook__item lookbook__item--wide" style="background-image: url('assets/坐具/IMG_0199.JPG')"></div>
+        <div class="lookbook__item" style="background-image: url('assets/坐具/IMG_0195.JPG')"></div>
+        <div class="lookbook__item" style="background-image: url('assets/卧室/IMG_0196.JPG')"></div>
+        <div class="lookbook__item lookbook__item--tall" style="background-image: url('assets/柜类/IMG_0193.JPG')"></div>
+        <div class="lookbook__item" style="background-image: url('assets/桌几/IMG_0197.JPG')"></div>
+        <div class="lookbook__item lookbook__item--wide" style="background-image: url('assets/餐厅/IMG_0198.JPG')"></div>
+        <div class="lookbook__item" style="background-image: url('assets/桌几/IMG_0200.JPG')"></div>
+      </div>
+    </section>
+
+    <!-- ===== JOURNAL ===== -->
+    <section class="journal" id="journal">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow" data-i18n="journal.eyebrow">Journal</p>
+          <h2 class="section-header__title" data-i18n="journal.title">The Atelier Notes</h2>
+        </div>
+        <div class="journal__grid">
+          <article class="journal-card reveal">
+            <a href="#" class="journal-card__link">
+              <div class="journal-card__image" style="background-image: url('assets/坐具/IMG_0199.JPG')"></div>
+              <div class="journal-card__content">
+                <p class="journal-card__date">June 2026 &mdash; Montpellier</p>
+                <h3 class="journal-card__title">Afternoon in the Sud: A Guangdong Atelier Finds Its French Audience</h3>
+                <span class="journal-card__cta">阅读全文 &rarr;</span>
+              </div>
+            </a>
+          </article>
+          <article class="journal-card reveal">
+            <a href="#" class="journal-card__link">
+              <div class="journal-card__image" style="background-image: url('assets/餐厅/IMG_0194.JPG')"></div>
+              <div class="journal-card__content">
+                <p class="journal-card__date">May 2026 &mdash; Los Angeles</p>
+                <h3 class="journal-card__title">First Home, UCLA: Why Good Design Shouldn't Wait for a Bigger Budget</h3>
+                <span class="journal-card__cta">阅读全文 &rarr;</span>
+              </div>
+            </a>
+          </article>
+          <article class="journal-card reveal">
+            <a href="#" class="journal-card__link">
+              <div class="journal-card__image" style="background-image: url('assets/坐具/IMG_0210.jpg')"></div>
+              <div class="journal-card__content">
+                <p class="journal-card__date">May 2026 &mdash; Guangdong Atelier</p>
+                <h3 class="journal-card__title">From Steel Frame to Living Room: The Hands Behind a SIMIER Sofa</h3>
+                <span class="journal-card__cta">阅读全文 &rarr;</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT / INQUIRY ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__text reveal">
+            <p class="section-header__eyebrow" data-i18n="contact.eyebrow">Get in Touch</p>
+            <h2 class="section-header__title">Start a<br>Conversation</h2>
+            <p class="contact__body">Whether you have a question about a piece, need design advice for your space, or are interested in becoming a distribution partner — we would love to hear from you.</p>
+            <div class="contact__info">
+              <div class="contact__item">
+                <span class="contact__label">Email</span>
+                <a href="mailto:hello@simier.top">hello@simier.top</a>
+              </div>
+              <div class="contact__item">
+                <span class="contact__label">Location</span>
+                <span>Foshan, Guangdong, China</span>
+              </div>
+            </div>
+          </div>
+          <form class="contact__form reveal" id="contactForm">
+            <div class="contact__field">
+              <input type="text" id="name" required placeholder="Your Name">
+              <label for="name">Name</label>
+            </div>
+            <div class="contact__field">
+              <input type="email" id="email" required placeholder="your@email.com">
+              <label for="email">Email</label>
+            </div>
+            <div class="contact__field">
+              <select id="subject">
+                <option value="">Select a topic</option>
+                <option value="product">Product Inquiry</option>
+                <option value="order">Order Question</option>
+                <option value="partnership">Distribution / Partnership</option>
+                <option value="press">Press / Media</option>
+                <option value="other">Other</option>
+              </select>
+              <label for="subject">Topic</label>
+            </div>
+            <div class="contact__field">
+              <textarea id="message" rows="5" required placeholder="Tell us about your project or question..."></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__inner reveal">
+          <p class="section-header__eyebrow">Stay in Touch</p>
+          <h2 class="newsletter__title" data-i18n="newsletter.title">Join the Atelier</h2>
+          <p class="newsletter__body">New collections, student exclusives, and pop-up events in cities around the world —<br>be the first to know where SIMIER appears next.</p>
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" class="newsletter__input" placeholder="Your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn--primary" data-i18n="newsletter.btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">SIMIER</a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Made with intention.<br>Crafted in our Guangdong workshop.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Pinterest">PI</a>
+            <a href="#" aria-label="小红书">RED</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">产品</h4>
+          <ul class="footer__links">
+            <li><a href="pages/seating.html">沙发 & 单椅</a></li>
+            <li><a href="pages/dining.html">餐桌 & 餐椅</a></li>
+            <li><a href="pages/bedroom.html">床</a></li>
+            <li><a href="pages/storage.html">柜类 & 桌几</a></li>
+                      </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">关于 SIMIER</h4>
+          <ul class="footer__links">
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="pages/factory.html">工厂探访</a></li>
+            <li><a href="#">全球足迹</a></li>
+            <li><a href="#">学生折扣计划</a></li>
+            <li><a href="#">加入我们</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">服务</h4>
+          <ul class="footer__links">
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">全球配送</a></li>
+            <li><a href="#">养护指南</a></li>
+            <li><a href="#">B2B 合作</a></li>
+            <li><a href="#">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 SIMIER 森怡家具（广东）有限公司. 保留所有权利。</p>
+        <p class="footer__location">Foshan, Guangdong, China &mdash; 南法 &mdash; 加州 &mdash; 伊斯坦布尔</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING AI CHAT WIDGET ===== -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-widget__bubble" id="chatBubble" aria-label="Chat with us">
+      <span class="chat-widget__emoji">💬</span>
+      <span class="chat-widget__pulse"></span>
+    </button>
+    <div class="chat-widget__panel" id="chatPanel">
+      <div class="chat-widget__header">
+        <div class="chat-widget__avatar">🛋️</div>
+        <div>
+          <p class="chat-widget__name">SIMIER Assistant</p>
+          <p class="chat-widget__status">Online · Ready to help</p>
+        </div>
+        <button class="chat-widget__close" id="chatClose">&times;</button>
+      </div>
+      <div class="chat-widget__messages" id="chatMessages">
+        <div class="chat-widget__msg chat-widget__msg--bot">
+          <p>Hey there! 👋 I'm your SIMIER design assistant. Ask me anything — fabric options, sizing, shipping, student discounts, or just say hi!</p>
+        </div>
+      </div>
+      <div class="chat-widget__quick" id="chatQuick">
+        <button class="chat-widget__quick-btn" data-q="What sofas fit a small apartment?">🛋️ Small apartment sofa?</button>
+        <button class="chat-widget__quick-btn" data-q="Do you have student discounts?">🎓 Student discounts?</button>
+        <button class="chat-widget__quick-btn" data-q="How long does shipping take?">🚚 Shipping time?</button>
+      </div>
+      <form class="chat-widget__input" id="chatInputForm">
+        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off">
+        <button type="submit">➤</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/i18n.js"></script>
+</body>
+</html>
