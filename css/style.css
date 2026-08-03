@@ -3136,22 +3136,11 @@ button {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transform: scale(1);
-  animation: sendayiHeroZoom 20s ease-out forwards;
-}
-@keyframes sendayiHeroZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.06); }
 }
 .sendayi-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0.4) 0%,
-    rgba(0,0,0,0.2) 40%,
-    rgba(0,0,0,0.6) 100%
-  );
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%);
   z-index: 1;
 }
 .sendayi-hero__content {
@@ -3162,29 +3151,28 @@ button {
   max-width: 800px;
   padding: 0 2rem;
 }
-.sendayi-hero__eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+.sendayi-hero__brand {
+  font-family: 'ZCOOL XiaoWei', var(--font-display-cn), serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.12em;
   color: var(--color-brass);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .sendayi-hero__title {
   font-family: 'ZCOOL XiaoWei', var(--font-display-cn), serif;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.35;
   margin-bottom: 1.5rem;
   letter-spacing: 0.04em;
 }
 .sendayi-hero__subtitle {
   font-family: var(--font-body-cn);
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   font-weight: 300;
   line-height: 1.9;
-  color: rgba(255,255,255,0.75);
-  max-width: 560px;
+  color: rgba(255,255,255,0.7);
+  max-width: 500px;
   margin: 0 auto;
 }
 .sendayi-hero__scroll {
@@ -3208,30 +3196,27 @@ button {
   50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
 }
 
-/* --- Sendayi Intro --- */
-.sendayi-intro {
+/* --- Sendayi Foreword --- */
+.sendayi-foreword {
   padding: clamp(5rem, 10vw, 8rem) 0;
 }
-.sendayi-intro__grid {
+.sendayi-foreword__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
 }
-.sendayi-intro__text {
-  max-width: 560px;
-}
-.sendayi-intro__body {
+.sendayi-foreword__body {
   margin-top: 2rem;
 }
-.sendayi-intro__body p {
+.sendayi-foreword__body p {
   font-family: var(--font-body-cn);
   font-size: 0.95rem;
   line-height: 2;
   color: #666;
   margin-bottom: 1rem;
 }
-.sendayi-intro__image {
+.sendayi-foreword__image {
   width: 100%;
   aspect-ratio: 4/5;
   background-size: cover;
@@ -3240,152 +3225,360 @@ button {
   box-shadow: 0 8px 40px rgba(0,0,0,0.08);
 }
 
-/* --- Sendayi Philosophy --- */
-.sendayi-philosophy {
+/* --- Sendayi Collections Overview --- */
+.sendayi-collections {
   padding: clamp(4rem, 8vw, 7rem) 0;
   background: var(--color-cream);
 }
-.sendayi-philosophy__grid {
+.sendayi-collections__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
 }
-.sendayi-philosophy__card {
-  text-align: center;
-  padding: 2.5rem 2rem;
-  background: #fff;
+.sendayi-collections__card {
+  position: relative;
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
   border-radius: 4px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-out-expo);
 }
-.sendayi-philosophy__card:hover {
+.sendayi-collections__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
-.sendayi-philosophy__icon {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
+.sendayi-collections__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+  z-index: 1;
 }
-.sendayi-philosophy__card-title {
+.sendayi-collections__card-content {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+  color: #fff;
+}
+.sendayi-collections__card-content h3 {
   font-family: var(--font-display-cn);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--color-ink);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.35rem;
 }
-.sendayi-philosophy__card-desc {
+.sendayi-collections__card-content p {
   font-family: var(--font-body-cn);
-  font-size: 0.88rem;
-  line-height: 1.85;
-  color: #777;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
 }
 
-/* --- Sendayi Featured Products --- */
-.sendayi-featured {
+/* --- Sendayi Series (Product detail sections) --- */
+.sendayi-series {
   padding: clamp(5rem, 10vw, 8rem) 0;
 }
-.sendayi-featured__grid {
+.sendayi-series--alt {
+  background: var(--color-cream);
+}
+.sendayi-series__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
-.sendayi-featured__card {
-  transition: transform 0.35s var(--ease-out-expo);
+
+/* --- Sendayi Product Card --- */
+.sendayi-product {
+  transition: transform 0.3s var(--ease-out-expo);
 }
-.sendayi-featured__card:hover {
-  transform: translateY(-6px);
+.sendayi-product:hover {
+  transform: translateY(-4px);
 }
-.sendayi-featured__img {
+.sendayi-product__image {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/3;
   background-size: cover;
   background-position: center;
   background-color: var(--color-stone);
-  border-radius: 2px;
+  border-radius: 3px;
   margin-bottom: 1rem;
 }
-.sendayi-featured__info {
-  padding: 0 0.25rem;
-}
-.sendayi-featured__name {
+.sendayi-product__info h3 {
   font-family: var(--font-display-cn);
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-ink);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
-.sendayi-featured__desc {
-  font-family: var(--font-body-cn);
-  font-size: 0.8rem;
+.sendayi-product__specs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
   color: var(--color-taupe);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.sendayi-product__desc {
+  font-family: var(--font-body-cn);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #777;
 }
 
-/* --- Sendayi Gallery (Masonry) --- */
-.sendayi-gallery {
-  padding: clamp(4rem, 8vw, 7rem) 0;
+/* --- Sendayi Zen Benefits --- */
+.sendayi-zen-benefits {
+  margin-top: clamp(4rem, 8vw, 6rem);
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+}
+.sendayi-zen-benefits__title {
+  font-family: var(--font-display-cn);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.sendayi-zen-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.sendayi-zen-benefits__item {
+  font-family: var(--font-body-cn);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #666;
+  padding: 1rem 1.25rem;
+  background: var(--color-warm-white);
+  border-radius: 4px;
+  border-left: 3px solid var(--color-brass);
+}
+
+/* --- Sendayi Mattress --- */
+.sendayi-mattress {
+  padding: clamp(5rem, 10vw, 8rem) 0;
   background: var(--color-cream);
 }
-.sendayi-gallery__subtitle {
-  font-family: var(--font-body-cn);
-  font-size: 0.95rem;
-  color: #888;
-  margin-top: 0.75rem;
-}
-.sendayi-gallery__masonry {
-  max-width: var(--container-max);
-  margin: clamp(3rem, 5vw, 5rem) auto 0;
-  padding: 0 var(--container-padding);
-  columns: 3;
-  column-gap: 1.25rem;
-}
-.sendayi-gallery__item {
-  break-inside: avoid;
-  margin-bottom: 1.25rem;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--color-stone);
-  aspect-ratio: 4/3;
-  border-radius: 2px;
-  transition: transform 0.35s var(--ease-out-expo);
-  cursor: pointer;
-}
-.sendayi-gallery__item:hover {
-  transform: scale(1.02);
-}
-.sendayi-gallery__item--tall {
-  aspect-ratio: 3/4;
-}
-.sendayi-gallery__item--wide {
-  aspect-ratio: 16/9;
-}
-
-/* --- Sendayi Materials --- */
-.sendayi-materials {
-  padding: clamp(5rem, 10vw, 8rem) 0;
-}
-.sendayi-materials__grid {
+.sendayi-mattress__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
 }
-.sendayi-materials__text {
-  max-width: 560px;
-}
-.sendayi-materials__text p {
-  font-family: var(--font-body-cn);
-  font-size: 0.95rem;
-  line-height: 2;
-  color: #666;
-  margin-bottom: 1rem;
-}
-.sendayi-materials__image {
+.sendayi-mattress__image {
   width: 100%;
   aspect-ratio: 4/5;
   background-size: cover;
   background-position: center;
   border-radius: 4px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+.sendayi-mattress__specs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.sendayi-mattress__spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.sendayi-mattress__spec-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+}
+.sendayi-mattress__spec-val {
+  font-size: 0.85rem;
+  color: var(--color-charcoal);
+}
+.sendayi-mattress__body p {
+  font-family: var(--font-body-cn);
+  font-size: 0.93rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Sendayi Materials (new layout) --- */
+.sendayi-materials {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+.sendayi-materials__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: center;
+  margin-bottom: clamp(4rem, 8vw, 6rem);
+}
+.sendayi-materials__block:last-child {
+  margin-bottom: 0;
+}
+.sendayi-materials__block-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.sendayi-materials__block-text h3 {
+  font-family: var(--font-display-cn);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 1rem;
+}
+.sendayi-materials__block-text p {
+  font-family: var(--font-body-cn);
+  font-size: 0.93rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+.sendayi-materials__features {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.sendayi-materials__features span {
+  font-family: var(--font-body-cn);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--color-cream);
+  border-radius: 100px;
+  color: var(--color-charcoal);
+}
+.sendayi-materials__block--reverse {
+  direction: ltr;
+}
+.sendayi-materials__block--reverse .sendayi-materials__block-image {
+  order: 2;
+}
+.sendayi-materials__block--reverse .sendayi-materials__block-text {
+  order: 1;
+}
+
+/* --- Sendayi Founder --- */
+.sendayi-founder {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  background: #1a120b;
+  color: #fff;
+}
+.sendayi-founder .section-header__eyebrow {
+  color: var(--color-brass);
+}
+.sendayi-founder .section-header__title {
+  color: #fff;
+}
+.sendayi-founder__body {
+  margin-top: 2rem;
+  max-width: 720px;
+}
+.sendayi-founder__body p {
+  font-family: var(--font-body-cn);
+  font-size: 0.95rem;
+  line-height: 2.1;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Sendayi Team --- */
+.sendayi-team {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+.sendayi-team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.sendayi-team__card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.sendayi-team__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.sendayi-team__card h3 {
+  font-family: var(--font-display-cn);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+.sendayi-team__role {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  margin-bottom: 0.75rem;
+}
+.sendayi-team__bio {
+  font-family: var(--font-body-cn);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: #777;
+}
+
+/* --- Sendayi Philosophy (brand section) --- */
+.sendayi-philosophy {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  background: var(--color-cream);
+}
+.sendayi-philosophy__inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.sendayi-philosophy__quote {
+  font-family: 'ZCOOL XiaoWei', var(--font-display-cn), serif;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+}
+.sendayi-philosophy__desc {
+  font-family: var(--font-body-cn);
+  font-size: 0.93rem;
+  line-height: 2;
+  color: #777;
+  margin-bottom: 3rem;
+}
+.sendayi-philosophy__motto {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+.sendayi-philosophy__motto h3 {
+  font-family: var(--font-display-cn);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 1rem;
+}
+.sendayi-philosophy__motto-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.sendayi-philosophy__motto-grid p {
+  font-family: var(--font-body-cn);
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.8;
 }
 
 /* --- Sendayi CTA --- */
@@ -3396,7 +3589,7 @@ button {
 }
 .sendayi-cta__inner {
   text-align: center;
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
 }
 .sendayi-cta__eyebrow {
@@ -3409,17 +3602,17 @@ button {
 }
 .sendayi-cta__title {
   font-family: var(--font-display-cn);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 1.5rem;
   color: #fff;
 }
 .sendayi-cta__body {
   font-family: var(--font-body-cn);
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   line-height: 2;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 2.5rem;
 }
 .sendayi-cta__actions {
@@ -3427,69 +3620,62 @@ button {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 .sendayi-cta__info {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
-}
-.sendayi-cta__info-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.sendayi-cta__info-label {
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-brass);
-}
-.sendayi-cta__info-val {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
 }
 
 /* --- Sendayi Responsive --- */
 @media (max-width: 900px) {
-  .sendayi-intro__grid,
-  .sendayi-materials__grid {
+  .sendayi-foreword__grid,
+  .sendayi-mattress__grid {
     grid-template-columns: 1fr;
   }
-  .sendayi-intro__image,
-  .sendayi-materials__image {
+  .sendayi-foreword__image,
+  .sendayi-mattress__image {
     aspect-ratio: 3/2;
     order: -1;
   }
-  .sendayi-intro__text,
-  .sendayi-materials__text {
-    max-width: 100%;
-  }
-  .sendayi-philosophy__grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-  .sendayi-featured__grid {
+  .sendayi-collections__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .sendayi-gallery__masonry {
-    columns: 2;
+  .sendayi-series__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sendayi-materials__block {
+    grid-template-columns: 1fr;
+  }
+  .sendayi-materials__block--reverse .sendayi-materials__block-image {
+    order: -1;
+  }
+  .sendayi-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sendayi-zen-benefits__grid {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 540px) {
   .sendayi-hero__title {
     font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
-  .sendayi-featured__grid {
+  .sendayi-collections__grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.75rem;
   }
-  .sendayi-gallery__masonry {
-    columns: 1;
+  .sendayi-series__grid {
+    grid-template-columns: 1fr;
+  }
+  .sendayi-team__grid {
+    grid-template-columns: 1fr 1fr;
   }
   .sendayi-cta__actions {
     flex-direction: column;
@@ -3497,7 +3683,7 @@ button {
   }
   .sendayi-cta__info {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 }
 
