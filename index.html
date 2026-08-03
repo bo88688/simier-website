@@ -62,20 +62,6 @@
       </div>
     </section>
 
-    <!-- ===== FACTORY TEASER ===== -->
-    <section class="factory-teaser reveal">
-      <a href="pages/factory.html" class="factory-teaser__link">
-        <div class="factory-teaser__bg lazy-bg" data-bg="assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG"></div>
-        <div class="factory-teaser__overlay"></div>
-        <div class="factory-teaser__content">
-          <p class="factory-teaser__eyebrow" data-i18n="factory.hero.eyebrow">Guangdong, China · Est. 2012</p>
-          <h2 class="factory-teaser__title" data-i18n="factory.teaser.title">See Where It's Made</h2>
-          <p class="factory-teaser__sub" data-i18n="factory.teaser.sub">Step inside our workshop — 27 quality checkpoints, 120+ craftspeople, one obsession with doing things right.</p>
-          <span class="factory-teaser__cta" data-i18n="factory.teaser.cta">Explore the Workshop →</span>
-        </div>
-      </a>
-    </section>
-
     <!-- ===== LOGISTICS & SHIPPING ===== -->
     <section class="logistics" id="logistics">
       <div class="container">
@@ -604,5 +590,16 @@
   <script src="js/cart.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/logistics.js"></script>
+  <script src="js/factory-bubble.js"></script>
+
+  <!-- ===== FACTORY TOUR FLOATING BUBBLE ===== -->
+  <div class="factory-bubble" id="factoryBubble">
+    <a href="pages/factory.html" class="factory-bubble__link" aria-label="Factory Tour">
+      <div class="factory-bubble__img lazy-bg" data-bg="assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG"></div>
+      <div class="factory-bubble__ring"></div>
+    </a>
+    <span class="factory-bubble__label" data-i18n="factory.bubble.label">See Inside</span>
+    <button class="factory-bubble__close" id="factoryBubbleClose" aria-label="Close">×</button>
+  </div>
 </body>
 </html>
