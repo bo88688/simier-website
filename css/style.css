@@ -156,6 +156,27 @@ button {
   color: var(--color-warm-white);
 }
 
+.btn--hero-accent {
+  background: var(--color-brass);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--hero-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.btn--hero-accent:hover {
+  background: #b8835a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(200, 149, 108, 0.3);
+}
+
 .btn--outline {
   border: 1px solid rgba(255, 255, 255, 0.8);
   color: #fff;
@@ -420,6 +441,13 @@ button {
   line-height: 1.65;
   color: #666;
   margin-bottom: 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .hero__cta-note {
