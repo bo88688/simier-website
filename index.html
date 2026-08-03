@@ -62,6 +62,70 @@
       </div>
     </section>
 
+    <!-- ===== LOGISTICS & SHIPPING ===== -->
+    <section class="logistics" id="logistics">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow" data-i18n="logistics.eyebrow">Shipping &amp; Logistics</p>
+          <h2 class="section-header__title" data-i18n="logistics.title">From Our Atelier<br>to Your Door</h2>
+          <p class="section-header__subtitle" data-i18n="logistics.subtitle">Sea, rail, and air — transparent schedules, reliable delivery. Every route tracked from Guangdong to your home.</p>
+        </div>
+
+        <nav class="logistics__tabs reveal" role="tablist">
+          <button class="logistics__tab logistics__tab--active" role="tab" aria-selected="true" data-tab="routes" data-i18n="logistics.tab.routes">Routes</button>
+          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="schedule" data-i18n="logistics.tab.schedule">Vessel Schedule</button>
+          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="rail" data-i18n="logistics.tab.rail">Rail Transport</button>
+          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="comparison" data-i18n="logistics.tab.comparison">Compare</button>
+        </nav>
+
+        <div class="logistics__panel logistics__panel--active" data-content="routes" role="tabpanel">
+          <div class="logistics__route-grid"></div>
+        </div>
+
+        <div class="logistics__panel" data-content="schedule" role="tabpanel" hidden>
+          <div class="logistics__table-wrap">
+            <table class="logistics__schedule-table">
+              <thead>
+                <tr>
+                  <th data-i18n="logistics.schedule.vessel">Vessel</th>
+                  <th data-i18n="logistics.schedule.departure">Departure</th>
+                  <th data-i18n="logistics.schedule.cutoff">Cutoff</th>
+                  <th data-i18n="logistics.schedule.arrival">Destination</th>
+                  <th data-i18n="logistics.schedule.eta">ETA</th>
+                  <th data-i18n="logistics.schedule.status">Status</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="logistics__footnote" data-i18n="logistics.schedule.footnote">Schedules updated weekly. Contact us for the most current cutoff dates.</p>
+        </div>
+
+        <div class="logistics__panel" data-content="rail" role="tabpanel" hidden>
+          <div class="logistics__rail-grid"></div>
+        </div>
+
+        <div class="logistics__panel" data-content="comparison" role="tabpanel" hidden>
+          <div class="logistics__compare"></div>
+        </div>
+
+        <div class="logistics__loading-indicator" aria-live="polite">
+          <div class="logistics__spinner"></div>
+          <p data-i18n="logistics.loading">Loading shipping information...</p>
+        </div>
+
+        <div class="logistics__error" hidden>
+          <p data-i18n="logistics.error">Unable to load shipping data. Please check back shortly.</p>
+          <button class="btn btn--secondary logistics__retry" data-i18n="logistics.retry">Retry</button>
+        </div>
+
+        <div class="logistics__cta reveal">
+          <p class="logistics__cta-text" data-i18n="logistics.cta.text">Need a custom shipping quote or have questions about delivery to your region?</p>
+          <a href="mailto:hello@simier.top?subject=Shipping%20Inquiry" class="btn btn--primary" data-i18n="logistics.cta.btn">Contact Logistics</a>
+        </div>
+      </div>
+    </section><!-- /logistics -->
+
     <!-- ===== BRAND PILLARS ===== -->
     <section class="pillars" id="about">
       <div class="container">
@@ -310,70 +374,6 @@
         </div>
       </div>
     </section><!-- /catalog -->
-
-    <!-- ===== LOGISTICS & SHIPPING ===== -->
-    <section class="logistics" id="logistics">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-header__eyebrow" data-i18n="logistics.eyebrow">Shipping &amp; Logistics</p>
-          <h2 class="section-header__title" data-i18n="logistics.title">From Our Atelier<br>to Your Door</h2>
-          <p class="section-header__subtitle" data-i18n="logistics.subtitle">Sea, rail, and air — transparent schedules, reliable delivery. Every route tracked from Guangdong to your home.</p>
-        </div>
-
-        <nav class="logistics__tabs reveal" role="tablist">
-          <button class="logistics__tab logistics__tab--active" role="tab" aria-selected="true" data-tab="routes" data-i18n="logistics.tab.routes">Routes</button>
-          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="schedule" data-i18n="logistics.tab.schedule">Vessel Schedule</button>
-          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="rail" data-i18n="logistics.tab.rail">Rail Transport</button>
-          <button class="logistics__tab" role="tab" aria-selected="false" data-tab="comparison" data-i18n="logistics.tab.comparison">Compare</button>
-        </nav>
-
-        <div class="logistics__panel logistics__panel--active" data-content="routes" role="tabpanel">
-          <div class="logistics__route-grid"></div>
-        </div>
-
-        <div class="logistics__panel" data-content="schedule" role="tabpanel" hidden>
-          <div class="logistics__table-wrap">
-            <table class="logistics__schedule-table">
-              <thead>
-                <tr>
-                  <th data-i18n="logistics.schedule.vessel">Vessel</th>
-                  <th data-i18n="logistics.schedule.departure">Departure</th>
-                  <th data-i18n="logistics.schedule.cutoff">Cutoff</th>
-                  <th data-i18n="logistics.schedule.arrival">Destination</th>
-                  <th data-i18n="logistics.schedule.eta">ETA</th>
-                  <th data-i18n="logistics.schedule.status">Status</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <p class="logistics__footnote" data-i18n="logistics.schedule.footnote">Schedules updated weekly. Contact us for the most current cutoff dates.</p>
-        </div>
-
-        <div class="logistics__panel" data-content="rail" role="tabpanel" hidden>
-          <div class="logistics__rail-grid"></div>
-        </div>
-
-        <div class="logistics__panel" data-content="comparison" role="tabpanel" hidden>
-          <div class="logistics__compare"></div>
-        </div>
-
-        <div class="logistics__loading-indicator" aria-live="polite">
-          <div class="logistics__spinner"></div>
-          <p data-i18n="logistics.loading">Loading shipping information...</p>
-        </div>
-
-        <div class="logistics__error" hidden>
-          <p data-i18n="logistics.error">Unable to load shipping data. Please check back shortly.</p>
-          <button class="btn btn--secondary logistics__retry" data-i18n="logistics.retry">Retry</button>
-        </div>
-
-        <div class="logistics__cta reveal">
-          <p class="logistics__cta-text" data-i18n="logistics.cta.text">Need a custom shipping quote or have questions about delivery to your region?</p>
-          <a href="mailto:hello@simier.top?subject=Shipping%20Inquiry" class="btn btn--primary" data-i18n="logistics.cta.btn">Contact Logistics</a>
-        </div>
-      </div>
-    </section><!-- /logistics -->
 
     <!-- ===== LOOKBOOK ===== -->
     <section class="lookbook" id="lookbook">
