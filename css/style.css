@@ -3087,6 +3087,392 @@ button {
   .logistics__compare-row { grid-template-columns: 1fr; gap: 0.5rem; padding: 1rem 0.5rem; }
 }
 
+/* ============================================================
+   森怡大时 — Chinese Heritage Collection
+   ============================================================ */
+
+/* --- Sendayi Hero --- */
+.sendayi-hero {
+  position: relative;
+  height: 90vh;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1a120b;
+  margin-top: var(--header-height);
+}
+.sendayi-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  animation: sendayiHeroZoom 20s ease-out forwards;
+}
+@keyframes sendayiHeroZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+.sendayi-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(0,0,0,0.6) 100%
+  );
+  z-index: 1;
+}
+.sendayi-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+.sendayi-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  margin-bottom: 1.5rem;
+}
+.sendayi-hero__title {
+  font-family: 'ZCOOL XiaoWei', var(--font-display-cn), serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+.sendayi-hero__subtitle {
+  font-family: var(--font-body-cn);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto;
+}
+.sendayi-hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  animation: sendayiScrollPulse 2s ease-in-out infinite;
+}
+@keyframes sendayiScrollPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+}
+
+/* --- Sendayi Intro --- */
+.sendayi-intro {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+.sendayi-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.sendayi-intro__text {
+  max-width: 560px;
+}
+.sendayi-intro__body {
+  margin-top: 2rem;
+}
+.sendayi-intro__body p {
+  font-family: var(--font-body-cn);
+  font-size: 0.95rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.sendayi-intro__image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+/* --- Sendayi Philosophy --- */
+.sendayi-philosophy {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--color-cream);
+}
+.sendayi-philosophy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+}
+.sendayi-philosophy__card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
+}
+.sendayi-philosophy__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.sendayi-philosophy__icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.sendayi-philosophy__card-title {
+  font-family: var(--font-display-cn);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.75rem;
+}
+.sendayi-philosophy__card-desc {
+  font-family: var(--font-body-cn);
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #777;
+}
+
+/* --- Sendayi Featured Products --- */
+.sendayi-featured {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+.sendayi-featured__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.sendayi-featured__card {
+  transition: transform 0.35s var(--ease-out-expo);
+}
+.sendayi-featured__card:hover {
+  transform: translateY(-6px);
+}
+.sendayi-featured__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-stone);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+.sendayi-featured__info {
+  padding: 0 0.25rem;
+}
+.sendayi-featured__name {
+  font-family: var(--font-display-cn);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+.sendayi-featured__desc {
+  font-family: var(--font-body-cn);
+  font-size: 0.8rem;
+  color: var(--color-taupe);
+}
+
+/* --- Sendayi Gallery (Masonry) --- */
+.sendayi-gallery {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: var(--color-cream);
+}
+.sendayi-gallery__subtitle {
+  font-family: var(--font-body-cn);
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 0.75rem;
+}
+.sendayi-gallery__masonry {
+  max-width: var(--container-max);
+  margin: clamp(3rem, 5vw, 5rem) auto 0;
+  padding: 0 var(--container-padding);
+  columns: 3;
+  column-gap: 1.25rem;
+}
+.sendayi-gallery__item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-stone);
+  aspect-ratio: 4/3;
+  border-radius: 2px;
+  transition: transform 0.35s var(--ease-out-expo);
+  cursor: pointer;
+}
+.sendayi-gallery__item:hover {
+  transform: scale(1.02);
+}
+.sendayi-gallery__item--tall {
+  aspect-ratio: 3/4;
+}
+.sendayi-gallery__item--wide {
+  aspect-ratio: 16/9;
+}
+
+/* --- Sendayi Materials --- */
+.sendayi-materials {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+.sendayi-materials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.sendayi-materials__text {
+  max-width: 560px;
+}
+.sendayi-materials__text p {
+  font-family: var(--font-body-cn);
+  font-size: 0.95rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.sendayi-materials__image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+
+/* --- Sendayi CTA --- */
+.sendayi-cta {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: #1a120b;
+  color: #fff;
+}
+.sendayi-cta__inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.sendayi-cta__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  margin-bottom: 1.25rem;
+}
+.sendayi-cta__title {
+  font-family: var(--font-display-cn);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+.sendayi-cta__body {
+  font-family: var(--font-body-cn);
+  font-size: 0.95rem;
+  line-height: 2;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 2.5rem;
+}
+.sendayi-cta__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.sendayi-cta__info {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.sendayi-cta__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.sendayi-cta__info-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+.sendayi-cta__info-val {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* --- Sendayi Responsive --- */
+@media (max-width: 900px) {
+  .sendayi-intro__grid,
+  .sendayi-materials__grid {
+    grid-template-columns: 1fr;
+  }
+  .sendayi-intro__image,
+  .sendayi-materials__image {
+    aspect-ratio: 3/2;
+    order: -1;
+  }
+  .sendayi-intro__text,
+  .sendayi-materials__text {
+    max-width: 100%;
+  }
+  .sendayi-philosophy__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .sendayi-featured__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sendayi-gallery__masonry {
+    columns: 2;
+  }
+}
+@media (max-width: 540px) {
+  .sendayi-hero__title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+  .sendayi-featured__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .sendayi-gallery__masonry {
+    columns: 1;
+  }
+  .sendayi-cta__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sendayi-cta__info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
 /* --- Lazy Load Background Images --- */
 .lazy-bg {
   background-color: var(--color-stone);
