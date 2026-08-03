@@ -11,54 +11,29 @@
   var closeBtn = document.getElementById('factoryBubbleClose');
   var DISMISS_KEY = 'simier_factory_bubble_dismissed';
 
-  // Don't show if user closed it this session
+  // 如果之前关闭过，不再显示
   if (sessionStorage.getItem(DISMISS_KEY) === '1') {
     bubble.style.display = 'none';
     return;
   }
 
-  // Entrance: show after a short delay with bounce
-  var showTimer = setTimeout(function () {
-    bubble.classList.add('factory-bubble--visible');
-    // Start floating after entrance settles
-    setTimeout(function () {
-      bubble.classList.add('factory-bubble--floating');
-    }, 600);
-  }, 1800);
+  // 入场动画后添加浮动效果
+  setTimeout(function () {
+    bubble.classList.add('factory-bubble--floating');
+  }, 800);
 
-  // Close button
+  // 关闭按钮
   if (closeBtn) {
     closeBtn.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
       sessionStorage.setItem(DISMISS_KEY, '1');
-      bubble.classList.remove('factory-bubble--visible');
-      bubble.classList.remove('factory-bubble--floating');
+      bubble.style.opacity = '0';
+      bubble.style.transform = bubble.style.transform + ' scale(0)';
       setTimeout(function () {
         bubble.style.display = 'none';
       }, 400);
     });
   }
-
-  // Fade out slightly when user scrolls past middle of page
-  var scrollHandler = function () {
-    var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrollPct > 0.6) {
-      bubble.style.opacity = Math.max(0.15, 1 - (scrollPct - 0.6) * 2);
-    } else {
-      bubble.style.opacity = '';
-    }
-  };
-
-  var scrollTicking = false;
-  window.addEventListener('scroll', function () {
-    if (!scrollTicking) {
-      requestAnimationFrame(function () {
-        scrollHandler();
-        scrollTicking = false;
-      });
-      scrollTicking = true;
-    }
-  }, { passive: true });
 
 })();
