@@ -17,8 +17,8 @@
     routes: [
       {region:'USA',sub:'West Coast · Los Angeles / Long Beach',transit:'18–22 days',method:'FCL Container · Sea Freight',path:'Foshan → Shenzhen (Yantian) → Pacific Route → Long Beach, CA',departure:'Shenzhen (Yantian)',arrival:'Long Beach, CA',highlight:'TRUE'},
       {region:'USA',sub:'East Coast · New York / Savannah',transit:'28–35 days',method:'FCL Container · Sea Freight',path:'Foshan → Shenzhen → Panama Canal → Savannah / NY',departure:'Shenzhen (Shekou)',arrival:'Savannah, GA / New York, NY',highlight:'FALSE'},
-      {region:'France',sub:'Marseille · Le Havre',transit:'28–32 days',method:'FCL / LCL · Sea Freight',path:'Foshan → Shenzhen → Suez Canal → Mediterranean → Marseille',departure:'Shenzhen (Yantian)',arrival:'Marseille / Le Havre',highlight:'TRUE'},
-      {region:'Turkey',sub:'Istanbul · Mersin',transit:'22–25 days',method:'FCL / LCL · Sea Freight',path:'Foshan → Shenzhen → Suez Canal → Mersin / Istanbul',departure:'Shenzhen (Yantian)',arrival:'Mersin / Istanbul',highlight:'FALSE'}
+      {region:'Turkey',sub:'Istanbul · Mersin',transit:'22–25 days',method:'FCL / LCL · Sea Freight',path:'Foshan → Shenzhen → Suez Canal → Mersin / Istanbul',departure:'Shenzhen (Yantian)',arrival:'Mersin / Istanbul',highlight:'TRUE'},
+      {region:'France',sub:'Marseille · Le Havre',transit:'28–32 days',method:'FCL / LCL · Sea Freight',path:'Foshan → Shenzhen → Suez Canal → Mediterranean → Marseille',departure:'Shenzhen (Yantian)',arrival:'Marseille / Le Havre',highlight:'FALSE'}
     ],
     schedule: [
       {vessel:'EVER FORTUNE',voyage:'0456W',departure_port:'Shenzhen (Yantian)',departure_date:'2026-08-15',cutoff_date:'2026-08-12',arrival_port:'Long Beach, CA',eta:'2026-09-05',status:'On Schedule',notes:'Early booking advised'},
