@@ -768,7 +768,7 @@
       'sendayi.founder.p3': '为了让更多人享受到古人的智慧结晶，传承即将没落的传统工艺，Maggie 带领团队遍访棕藤手工艺者，根据现代人生活习惯和审美，经过2年多的产品研发，不断试验与调整，制作出了各类带着软屉工艺的家居产品——让健康养生从日常生活的一凳一椅一床开始。',
       'sendayi.team.eyebrow': '团队与顾问',
       'sendayi.team.title': '以古为基 · 融今时气息',
-      'sendayi.team.c1_name': '陈少凯',
+      'sendayi.team.c1_name': '凯少',
       'sendayi.team.c1_role': '首席设计总监',
       'sendayi.team.c1_bio': '玩海，登雪山。喜设计石笔墨，好高古青铜、唐宋气韵、大明文风。欲以古为基，融今时气息。',
       'sendayi.team.c2_name': '李式建',
