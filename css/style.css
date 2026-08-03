@@ -3687,6 +3687,205 @@ button {
   }
 }
 
+/* ============================================================
+   森怡大时 — Sub Pages (通用样式)
+   ============================================================ */
+
+/* Breadcrumb */
+.sendayi-breadcrumb {
+  padding: 1.5rem var(--container-padding);
+  font-size: 0.72rem;
+  color: var(--color-taupe);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.sendayi-breadcrumb a {
+  color: var(--color-taupe);
+  transition: color 0.2s;
+}
+.sendayi-breadcrumb a:hover { color: var(--color-charcoal); }
+.sendayi-breadcrumb span { color: var(--color-charcoal); }
+
+/* Sub-page Hero (smaller than main hero) */
+.sendayi-page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1a120b;
+}
+.sendayi-page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.sendayi-page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+.sendayi-page-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+.sendayi-page-hero__eyebrow {
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+  margin-bottom: 0.8rem;
+}
+.sendayi-page-hero__title {
+  font-family: 'ZCOOL XiaoWei', var(--font-display-cn), serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Sub-page Content Sections */
+.sendayi-page-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.sendayi-page-section--alt {
+  background: var(--color-cream);
+}
+.sendayi-page-section__title {
+  font-family: var(--font-display-cn);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 1.5rem;
+}
+.sendayi-page-section__text {
+  font-family: var(--font-body-cn);
+  font-size: 0.93rem;
+  line-height: 2;
+  color: #666;
+  max-width: 680px;
+}
+.sendayi-page-section__text p { margin-bottom: 0.75rem; }
+
+/* Specs Table */
+.sendayi-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.sendayi-specs__item {
+  padding: 1rem 1.25rem;
+  background: var(--color-warm-white);
+  border-radius: 4px;
+  border-left: 3px solid var(--color-brass);
+}
+.sendayi-specs__label {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-taupe);
+  margin-bottom: 0.3rem;
+}
+.sendayi-specs__value {
+  font-size: 0.88rem;
+  color: var(--color-charcoal);
+}
+
+/* Detail Grid (image + text) */
+.sendayi-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.sendayi-detail-grid__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+/* Product Card Link */
+.sendayi-card-link {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+}
+.sendayi-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+.sendayi-card-link__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-stone);
+}
+.sendayi-card-link__info {
+  padding: 1rem 1.25rem;
+}
+.sendayi-card-link__info h3 {
+  font-family: var(--font-display-cn);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+.sendayi-card-link__info p {
+  font-size: 0.78rem;
+  color: var(--color-taupe);
+}
+
+/* Back Link */
+.sendayi-back {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+.sendayi-back a {
+  font-size: 0.85rem;
+  color: var(--color-taupe);
+  transition: color 0.2s;
+}
+.sendayi-back a:hover { color: var(--color-charcoal); }
+
+/* Section header subtitle */
+.sendayi-page-section__subtitle {
+  font-family: var(--font-body-cn);
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sendayi-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .sendayi-detail-grid__image {
+    order: -1;
+  }
+  .sendayi-specs {
+    grid-template-columns: 1fr;
+  }
+  .sendayi-page-hero {
+    height: 40vh;
+    min-height: 280px;
+  }
+}
+
 /* --- Lazy Load Background Images --- */
 .lazy-bg {
   background-color: var(--color-stone);
