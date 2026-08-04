@@ -1,4 +1,14 @@
-/* ============================================================
+/* =================================================='sendayi.chat.placeholder': 'Tapez votre question...',
+      'gallery.hero_eyebrow': 'Collection Complète',
+      'gallery.hero_title': 'Galerie Produits',
+      'gallery.hero_sub': 'Chaque pièce, fabriquée dans notre atelier du Guangdong',
+      'gallery.tab_all': 'Tout',
+      'gallery.tab_seating': 'Canapés & Chaises',
+      'gallery.tab_dining': 'Salle à Manger',
+      'gallery.tab_bedroom': 'Chambre',
+      'gallery.tab_storage': 'Rangement & Tables',
+      'gallery.tab_sendayi': 'Sen Yi Da Shi',
+==========
    SIMIER i18n — EN / ZH / FR / AR
    ============================================================ */
 
@@ -13,7 +23,8 @@
       'nav.destinations': 'Footprint',
       'nav.lookbook': 'Lookbook',
       'nav.journal': 'Journal',
-      'nav.logistics': 'Logistics',
+      'nav.logistics': 'Logistics',      'nav.gallery': 'Gallery',
+
       'nav.contact': 'Contact',
       'nav.sendayi': 'Sen Yi Da Shi',
 
@@ -257,7 +268,17 @@
       'sendayi.chat.q1': '🪑 What is Ruanti weaving craft?',
       'sendayi.chat.q2': '🧘 Can the Zen series be customized?',
       'sendayi.chat.q3': '🛏️ Xianyue mattress pricing?',
-      'sendayi.chat.placeholder': 'Type your question...',
+      'sendayi.chat.placeholder': 'Type your question...','sendayi.chat.placeholder': 'Type your question...',
+      'gallery.hero_eyebrow': 'Full Collection',
+      'gallery.hero_title': 'Product Gallery',
+      'gallery.hero_sub': 'Every piece, crafted in our Guangdong workshop',
+      'gallery.tab_all': 'All',
+      'gallery.tab_seating': 'Sofas & Chairs',
+      'gallery.tab_dining': 'Dining',
+      'gallery.tab_bedroom': 'Bedroom',
+      'gallery.tab_storage': 'Storage & Tables',
+      'gallery.tab_sendayi': 'Sen Yi Da Shi',
+
 
 
       // Hero
@@ -555,7 +576,8 @@
       'nav.destinations': '足迹',
       'nav.lookbook': '画册',
       'nav.journal': '日志',
-      'nav.logistics': '物流',
+      'nav.logistics': '物流',      'nav.gallery': '图库',
+
       'nav.contact': '联系',
       'nav.sendayi': '森怡大时',
       'sendayi.back_to_main': '← 返回森怡大时',
@@ -798,7 +820,17 @@
       'sendayi.chat.q1': '🪑 什么是软屉工艺？',
       'sendayi.chat.q2': '🧘 禅系列可以定制吗？',
       'sendayi.chat.q3': '🛏️ 闲月床垫价格？',
-      'sendayi.chat.placeholder': '输入您的问题…',
+      'sendayi.chat.placeholder': '输入您的问题…','sendayi.chat.placeholder': '输入您的问题…',
+      'gallery.hero_eyebrow': '全系列作品',
+      'gallery.hero_title': '产品图库',
+      'gallery.hero_sub': '每一件，都出自广东工坊',
+      'gallery.tab_all': '全部',
+      'gallery.tab_seating': '坐具',
+      'gallery.tab_dining': '餐厅',
+      'gallery.tab_bedroom': '卧室',
+      'gallery.tab_storage': '柜类 & 桌几',
+      'gallery.tab_sendayi': '森怡大时',
+
 
 
       'hero.eyebrow': '广东森怡家具有限公司',
@@ -1072,7 +1104,8 @@
       'nav.destinations': 'Empreinte',
       'nav.lookbook': 'Lookbook',
       'nav.journal': 'Journal',
-      'nav.logistics': 'Logistique',
+      'nav.logistics': 'Logistique',      'nav.gallery': 'Galerie',
+
       'nav.contact': 'Contact',
       'nav.sendayi': 'Sen Yi Da Shi',
 
@@ -1602,7 +1635,8 @@
       'nav.destinations': 'بصمتنا',
       'nav.lookbook': 'معرض الصور',
       'nav.journal': 'المجلة',
-      'nav.logistics': 'اللوجستيات',
+      'nav.logistics': 'اللوجستيات',      'nav.gallery': 'معرض الصور',
+
       'nav.contact': 'اتصل بنا',
       'nav.sendayi': 'سين يي دا شي',
 
@@ -1846,7 +1880,17 @@
       'sendayi.chat.q1': '🪑 ما هي حرفة روانتي؟',
       'sendayi.chat.q2': '🧘 هل يمكن تخصيص سلسلة الزن؟',
       'sendayi.chat.q3': '🛏️ سعر مرتبة شيان يوي؟',
-      'sendayi.chat.placeholder': 'اكتب سؤالك...',
+      'sendayi.chat.placeholder': 'اكتب سؤالك...','sendayi.chat.placeholder': 'اكتب سؤالك...',
+      'gallery.hero_eyebrow': 'المجموعة الكاملة',
+      'gallery.hero_title': 'معرض المنتجات',
+      'gallery.hero_sub': 'كل قطعة، مصنوعة في ورشتنا في غوانغدونغ',
+      'gallery.tab_all': 'الكل',
+      'gallery.tab_seating': 'الأرائك والكراسي',
+      'gallery.tab_dining': 'طاولات الطعام',
+      'gallery.tab_bedroom': 'غرفة النوم',
+      'gallery.tab_storage': 'التخزين والطاولات',
+      'gallery.tab_sendayi': 'سين يي دا شي',
+
 
 
       'hero.eyebrow': 'شركة قوانغدونغ سيمييه للأثاث المحدودة',
