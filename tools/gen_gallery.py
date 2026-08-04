@@ -67,12 +67,9 @@ HEAD_OPEN = '''<!DOCTYPE html>
 
     /* Full Gallery Masonry */
     .dtc-masonry {{ columns:4; column-gap:1rem; }}
-    .dtc-masonry__item {{ break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); position:relative; }}
+    .dtc-masonry__item {{ break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); }}
     .dtc-masonry__item:hover {{ transform:scale(1.02); }}
     .dtc-masonry__item img {{ width:100%; display:block; }}
-    .dtc-masonry__caption {{ position:absolute; bottom:0; left:0; right:0; padding:1.2rem 1rem; background:linear-gradient(transparent,rgba(0,0,0,0.7)); color:#fff; opacity:0; transition:opacity 0.35s; pointer-events:none; }}
-    .dtc-masonry__item:hover .dtc-masonry__caption {{ opacity:1; }}
-    .dtc-masonry__caption span {{ display:block; font-family:var(--font-body); font-size:0.78rem; line-height:1.55; font-weight:300; letter-spacing:0.01em; }}
 
     /* CTA Banner */
     .dtc-cta {{ text-align:center; padding:clamp(4rem,8vw,6rem) 0; }}
@@ -169,21 +166,6 @@ configs = {
         cta_text='Browse the full seating collection online, or contact us for a custom consultation — dimensions, fabrics, and fill can all be tailored. Every piece is made to order in our Guangdong workshop.',
         cta_link='../seating.html', cta_label='Shop Seating',
         asset_cat='坐具',
-        captions=[
-            'Kiln-dried hardwood frame. Silent. Solid. Built to outlast the mortgage.', 'Italian-milled performance linen. 40,000 double rubs. It only gets better with age.',
-            'Eight-way hand-tied springs. Even weight distribution. Your lower back will notice.', 'Solid walnut legs, hand-oiled to a depth that shifts with the light.',
-            'The angle of the backrest took three prototypes to get right. You will feel it in the first five minutes.',
-            'Foam density calibrated per cushion — because a seat is not a backrest is not an arm.',
-            'No plywood. No particle board. No apologies.', 'FSC-certified hardwood from forests that are managed, not mined.',
-            'The fabric you choose will be on this frame longer than most cars stay on the road.', 'CertiPUR-US foam. Zero heavy metals. Zero formaldehyde. Zero compromises.',
-            'Every seam is double-stitched. Every corner block is reinforced. Every leg is hand-finished.', 'A good sofa does not announce itself. It just makes every room feel more like home.',
-            'Performance weave tested to 100,000 double rubs — which is industry shorthand for nearly indestructible.',
-            'Mortise-and-tenon joinery where the frame meets the leg. The same joint that has held furniture together for three thousand years.',
-            'Low-VOC finish. No off-gassing. No headaches. Just the quiet presence of well-made furniture.',
-            'Designed in Guangdong. Built by artisans who average fifteen years of experience. Shipped worldwide.',
-            'The cushion fill is a blend of down, feather, and high-resilience foam — structured enough to support, soft enough to sink into.',
-            'Every frame is corner-blocked and double-doweled. You will never hear it creak.',
-        ],
     ),
     'dining': dict(
         title='The Dining Collection',
@@ -206,23 +188,6 @@ configs = {
         cta_text='Explore our dining collection — from intimate two-person sets to tables that extend to seat twelve. Every piece is made to order in Guangdong.',
         cta_link='../dining.html', cta_label='Shop Dining',
         asset_cat='餐厅',
-        captions=[
-            'Solid hardwood slab. Bookmatched for symmetry. Hand-sanded through five grits until it feels soft.',
-            'Mortise-and-tenon leg joints. No metal brackets. No cam locks. Just wood, interlocking with wood.',
-            'A dining table should not wobble when you lean on it. Ours do not.',
-            'The finish is hand-rubbed matte lacquer — it protects against water rings without looking like plastic.',
-            'Every chair frame is corner-blocked and glued. The way chairs were built before factories discovered shortcuts.',
-            'Seat depth calibrated to actual human bodies — not a 1970s ergonomics textbook.',
-            'American black walnut. The grain tells the story of the tree. We just made it flat.',
-            'This table will hold birthday cakes and condolence cards. Homework and holiday dinners. It is ready.',
-            'No veneers. No engineered wood cores. The surface you see is the surface you get — for life.',
-            'Hand-applied finish that lets the wood breathe. It will age. That is not a flaw.',
-            'Solid ash. Light in color, heavy in character. Each board selected for grain and stability.',
-            'The chair you do not think about during a three-hour meal. That is the highest compliment we can receive.',
-            'Table legs attached with traditional joinery. The same technique used in Ming dynasty furniture.',
-            'Extension leaves store within the table. No garage. No closet. Just pull and pivot.',
-            'Every edge is hand-softened. No sharp corners. Just a quiet invitation to lean in.',
-        ],
     ),
     'bedroom': dict(
         title='The Bedroom Collection',
@@ -245,23 +210,6 @@ configs = {
         cta_text='Discover beds, headboards, and nightstands — every piece made to order in our Guangdong workshop. Custom dimensions available.',
         cta_link='../bedroom.html', cta_label='Shop Bedroom',
         asset_cat='卧室',
-        captions=[
-            'Kiln-dried hardwood platform. Steel-reinforced center support. Absolute silence at 3 a.m.',
-            'No plywood. No particle board. No cam locks that loosen with every turn of the seasons.',
-            'The headboard is upholstered in performance linen — lean back with a book and a cup of something warm.',
-            'Solid wood nightstand. Soft-close drawer. Felt-lined top shelf for the things you want within reach.',
-            'Slats spaced for mattress airflow and warranty compliance. Your mattress breathes better. So do you.',
-            'Adjustable center leg for uneven floors — because no floor is perfectly level, and a bed should not wobble.',
-            'Low-VOC water-based finish. No off-gassing. No chemical smell. Just clean air in the room where you sleep.',
-            'English-dovetailed drawers. Solid wood, not veneered MDF. Open it every morning. It will feel the same in twenty years.',
-            'The bed frame that your partner will not feel you leave. Engineered silence.',
-            'Headboard brackets are steel, not plastic. Back panels are finished, not forgotten.',
-            'Twenty-six years of your life, spent here. We think that deserves more than a box spring.',
-            'Every surface you can touch from the bed is sanded to the same standard as a dining table. Your fingertips will notice.',
-            'The frame that arrives fully assembled. No allen key. No instruction manual. Just a bed, ready.',
-            'FSC-certified hardwood. Because the forest matters as much as the furniture.',
-            'Hand-applied oil finish on every visible surface — and every invisible one, too.',
-        ],
     ),
     'storage': dict(
         title='The Storage Collection',
@@ -284,23 +232,6 @@ configs = {
         cta_text='Explore cabinets, sideboards, coffee tables, consoles, and more. Every piece made to order. Custom dimensions and configurations available.',
         cta_link='../storage.html', cta_label='Shop Storage',
         asset_cat='柜类+桌几',
-        captions=[
-            'English-dovetailed drawers at every corner. A joint that strengthens as the wood moves through the seasons.',
-            'Full-extension drawer glides rated for 100 pounds. Open it fully. Load it completely. It will glide.',
-            'Solid brass shelf pins. Not plastic. Not chromed zinc. Brass — because some details are worth the trouble.',
-            'Soft-close hardware catches every door in its last inch of travel. The sound of a cabinet closing should be a quiet click.',
-            'The back panel is finished to the same standard as the front. Because someday you might see both.',
-            'Solid wood shelves, not veneered MDF. Adjust them without worrying about the clips tearing out.',
-            'Hand-rubbed matte lacquer on every surface — inside the drawers, behind the doors, on the back panel.',
-            'Mortise-and-tenon leg joints on every table. A coffee table should not wobble when you put your feet up.',
-            'No particle board. No stapled back panels. No drawer bottoms that bow under the weight of a few sweaters.',
-            'Every edge is hand-softened. No sharp corners at shin height. Your legs will thank us.',
-            'Solid hardwood top. Hand-sanded through five grits until the surface feels almost soft to the touch.',
-            'The cabinet that looks as good from the back as it does from the front. Place it anywhere.',
-            'Felt-lined top drawer. For the things that deserve a softer landing.',
-            'Adjustable shelves let you reconfigure as your collection grows. Because storage should adapt to you, not the other way around.',
-            'Hand-applied oil finish that develops a patina. The cabinet will look better in ten years than it does today.',
-        ],
     ),
     'sendayi': dict(
         title='Sen Yi Da Shi',
@@ -323,23 +254,6 @@ configs = {
         cta_text='Visit the complete Sen Yi Da Shi section with 13 pages of detailed product specifications, material deep-dives, founder stories, and team profiles.',
         cta_link='../sendayi.html', cta_label='Explore 森怡大时',
         asset_cat='森怡大时',
-        captions=[
-            'Hand-woven Ruanti seat — palm and rattan fibers, interlaced by artisans who inherited a six-hundred-year technique.',
-            'Wild Indonesian rattan. Volcanic soil. Equatorial sun. The thickest vines reach six centimeters in diameter.',
-            'Mountain palm fiber, referenced in the Ming Dynasty Compendium of Materia Medica. The most breathable natural material known.',
-            'Traditional mortise-and-tenon joinery. No metal. No screws. Just wood, shaped to fit wood, for centuries.',
-            'Solid elm frame, finished with natural wood wax oil. Zero formaldehyde. The wood continues to breathe.',
-            'Ruanti weaving produces a seat that is simultaneously taut and giving. Cool in summer. Warm in winter.',
-            'Every piece passes through the hands of artisans averaging fifteen years of experience. Paid for time, not output.',
-            'German Osmo hardwax oil — plant-derived, food-safe, and formulated to let the grain show through.',
-            'FSC-certified black walnut. Each board selected individually for grain character and structural integrity.',
-            'The Ruanti technique was nearly lost in the 20th century. Sen Yi Da Shi is why it still exists.',
-            '山棕纤维 — 透水透气，防虫防菌。世界卫生组织指定医用床垫材料。',
-            'Hand-harvested rattan, stripped of knots and irregularities, woven into surfaces that will outlast us all.',
-            'Every joint is visible. Every surface is honest. There is nothing to hide — and nowhere to hide it.',
-            'A thousand years of technique, adapted for contemporary homes. The past and present, in conversation.',
-            'Natural wood wax oil finish. It protects without sealing. The wood ages. So do you. That is the point.',
-        ],
     ),
 }
 
@@ -415,10 +329,8 @@ for key, cfg in configs.items():
         </div>
         <div class="dtc-masonry reveal">
 '''
-    captions = cfg.get('captions', ['Thoughtfully made. Built to last.'])
-    for i, img in enumerate(imgs):
-        cap = captions[i % len(captions)]
-        html += f'          <div class="dtc-masonry__item"><img src="{img}" alt="{cfg["title"]}" loading="lazy"><div class="dtc-masonry__caption"><span>{cap}</span></div></div>\n'
+    for img in imgs:
+        html += f'          <div class="dtc-masonry__item"><img src="{img}" alt="{cfg["title"]}" loading="lazy"></div>\n'
     html += '''        </div>\n      </div>\n    </section>\n'''
 
     # CTA
