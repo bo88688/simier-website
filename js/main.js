@@ -37,9 +37,6 @@
     mainNav.classList.add('active');
     header.classList.add('header--scrolled');
     document.body.style.overflow = 'hidden';
-    // Hide chat bubble when menu is open
-    var chat = document.getElementById('chatWidget');
-    if (chat) chat.style.display = 'none';
   }
 
   function closeMenu() {
@@ -47,10 +44,7 @@
     menuToggle.classList.remove('active');
     mainNav.classList.remove('active');
     document.body.style.overflow = '';
-    updateHeader();
-    // Restore chat bubble
-    var chat = document.getElementById('chatWidget');
-    if (chat) chat.style.display = '';
+    updateHeader(); // Restore correct header state
   }
 
   function toggleMenu() {
