@@ -46,9 +46,12 @@
 
     /* Full Gallery Masonry */
     .dtc-masonry { columns:4; column-gap:1rem; }
-    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); }
+    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); position:relative; }
     .dtc-masonry__item:hover { transform:scale(1.02); }
     .dtc-masonry__item img { width:100%; display:block; }
+    .dtc-masonry__caption { position:absolute; bottom:0; left:0; right:0; padding:1.2rem 1rem; background:linear-gradient(transparent,rgba(0,0,0,0.7)); color:#fff; opacity:0; transition:opacity 0.35s; pointer-events:none; }
+    .dtc-masonry__item:hover .dtc-masonry__caption { opacity:1; }
+    .dtc-masonry__caption span { display:block; font-family:var(--font-body); font-size:0.78rem; line-height:1.55; font-weight:300; letter-spacing:0.01em; }
 
     /* CTA Banner */
     .dtc-cta { text-align:center; padding:clamp(4rem,8vw,6rem) 0; }
@@ -160,11 +163,11 @@
           <h2 class="dtc-section__title">Every finish. Every angle.<br>Every detail.</h2>
         </div>
         <div class="dtc-masonry reveal">
-          <div class="dtc-masonry__item"><img src="../../assets/餐厅/IMG_7721.JPG" alt="The Dining Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/餐厅/IMG_7723.JPG" alt="The Dining Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table1.jpg" alt="The Dining Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table2.jpg" alt="The Dining Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table3.jpg" alt="The Dining Collection" loading="lazy"></div>
+          <div class="dtc-masonry__item"><img src="../../assets/餐厅/IMG_7721.JPG" alt="The Dining Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Solid hardwood slab. Bookmatched for symmetry. Hand-sanded through five grits until it feels soft.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/餐厅/IMG_7723.JPG" alt="The Dining Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Mortise-and-tenon leg joints. No metal brackets. No cam locks. Just wood, interlocking with wood.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table1.jpg" alt="The Dining Collection" loading="lazy"><div class="dtc-masonry__caption"><span>A dining table should not wobble when you lean on it. Ours do not.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table2.jpg" alt="The Dining Collection" loading="lazy"><div class="dtc-masonry__caption"><span>The finish is hand-rubbed matte lacquer — it protects against water rings without looking like plastic.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/餐厅/mp-table3.jpg" alt="The Dining Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Every chair frame is corner-blocked and glued. The way chairs were built before factories discovered shortcuts.</span></div></div>
         </div>
       </div>
     </section>

@@ -46,9 +46,12 @@
 
     /* Full Gallery Masonry */
     .dtc-masonry { columns:4; column-gap:1rem; }
-    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); }
+    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); position:relative; }
     .dtc-masonry__item:hover { transform:scale(1.02); }
     .dtc-masonry__item img { width:100%; display:block; }
+    .dtc-masonry__caption { position:absolute; bottom:0; left:0; right:0; padding:1.2rem 1rem; background:linear-gradient(transparent,rgba(0,0,0,0.7)); color:#fff; opacity:0; transition:opacity 0.35s; pointer-events:none; }
+    .dtc-masonry__item:hover .dtc-masonry__caption { opacity:1; }
+    .dtc-masonry__caption span { display:block; font-family:var(--font-body); font-size:0.78rem; line-height:1.55; font-weight:300; letter-spacing:0.01em; }
 
     /* CTA Banner */
     .dtc-cta { text-align:center; padding:clamp(4rem,8vw,6rem) 0; }
@@ -160,41 +163,41 @@
           <h2 class="dtc-section__title">Every finish. Every angle.<br>Every detail.</h2>
         </div>
         <div class="dtc-masonry reveal">
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/IMG_0210.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/jjkjjk.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/lounge-chair-green.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-01.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-02.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-03.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-04.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-05.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-06.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-07.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-08.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-09.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-10.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-11.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-12.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-13.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-14.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-15.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-16.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-17.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-18.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-19.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-20.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-21.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-22.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-23.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-24.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-25.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-26.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-27.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-28.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512215855_13805_232.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512220300_13808_232.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512222812_13812_232.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512222812_13813_232.jpg" alt="Sen Yi Da Shi" loading="lazy"></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/IMG_0210.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-woven Ruanti seat — palm and rattan fibers, interlaced by artisans who inherited a six-hundred-year technique.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/jjkjjk.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Wild Indonesian rattan. Volcanic soil. Equatorial sun. The thickest vines reach six centimeters in diameter.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/lounge-chair-green.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Mountain palm fiber, referenced in the Ming Dynasty Compendium of Materia Medica. The most breathable natural material known.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-01.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Traditional mortise-and-tenon joinery. No metal. No screws. Just wood, shaped to fit wood, for centuries.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-02.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Solid elm frame, finished with natural wood wax oil. Zero formaldehyde. The wood continues to breathe.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-03.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Ruanti weaving produces a seat that is simultaneously taut and giving. Cool in summer. Warm in winter.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-04.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Every piece passes through the hands of artisans averaging fifteen years of experience. Paid for time, not output.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-05.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>German Osmo hardwax oil — plant-derived, food-safe, and formulated to let the grain show through.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-06.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>FSC-certified black walnut. Each board selected individually for grain character and structural integrity.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-07.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>The Ruanti technique was nearly lost in the 20th century. Sen Yi Da Shi is why it still exists.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-08.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>山棕纤维 — 透水透气，防虫防菌。世界卫生组织指定医用床垫材料。</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-09.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-harvested rattan, stripped of knots and irregularities, woven into surfaces that will outlast us all.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-10.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Every joint is visible. Every surface is honest. There is nothing to hide — and nowhere to hide it.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-11.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>A thousand years of technique, adapted for contemporary homes. The past and present, in conversation.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-12.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Natural wood wax oil finish. It protects without sealing. The wood ages. So do you. That is the point.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-13.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-woven Ruanti seat — palm and rattan fibers, interlaced by artisans who inherited a six-hundred-year technique.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-14.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Wild Indonesian rattan. Volcanic soil. Equatorial sun. The thickest vines reach six centimeters in diameter.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-15.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Mountain palm fiber, referenced in the Ming Dynasty Compendium of Materia Medica. The most breathable natural material known.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-16.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Traditional mortise-and-tenon joinery. No metal. No screws. Just wood, shaped to fit wood, for centuries.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-17.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Solid elm frame, finished with natural wood wax oil. Zero formaldehyde. The wood continues to breathe.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-18.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Ruanti weaving produces a seat that is simultaneously taut and giving. Cool in summer. Warm in winter.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-19.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Every piece passes through the hands of artisans averaging fifteen years of experience. Paid for time, not output.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-20.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>German Osmo hardwax oil — plant-derived, food-safe, and formulated to let the grain show through.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-21.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>FSC-certified black walnut. Each board selected individually for grain character and structural integrity.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-22.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>The Ruanti technique was nearly lost in the 20th century. Sen Yi Da Shi is why it still exists.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-23.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>山棕纤维 — 透水透气，防虫防菌。世界卫生组织指定医用床垫材料。</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-24.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-harvested rattan, stripped of knots and irregularities, woven into surfaces that will outlast us all.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-25.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Every joint is visible. Every surface is honest. There is nothing to hide — and nowhere to hide it.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-26.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>A thousand years of technique, adapted for contemporary homes. The past and present, in conversation.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-27.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Natural wood wax oil finish. It protects without sealing. The wood ages. So do you. That is the point.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/sendayi-28.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-woven Ruanti seat — palm and rattan fibers, interlaced by artisans who inherited a six-hundred-year technique.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512215855_13805_232.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Wild Indonesian rattan. Volcanic soil. Equatorial sun. The thickest vines reach six centimeters in diameter.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512220300_13808_232.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Mountain palm fiber, referenced in the Ming Dynasty Compendium of Materia Medica. The most breathable natural material known.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512222812_13812_232.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Traditional mortise-and-tenon joinery. No metal. No screws. Just wood, shaped to fit wood, for centuries.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/森怡大时/微信图片_20260512222812_13813_232.jpg" alt="Sen Yi Da Shi" loading="lazy"><div class="dtc-masonry__caption"><span>Solid elm frame, finished with natural wood wax oil. Zero formaldehyde. The wood continues to breathe.</span></div></div>
         </div>
       </div>
     </section>

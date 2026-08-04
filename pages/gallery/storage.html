@@ -46,9 +46,12 @@
 
     /* Full Gallery Masonry */
     .dtc-masonry { columns:4; column-gap:1rem; }
-    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); }
+    .dtc-masonry__item { break-inside:avoid; margin-bottom:1rem; border-radius:3px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); position:relative; }
     .dtc-masonry__item:hover { transform:scale(1.02); }
     .dtc-masonry__item img { width:100%; display:block; }
+    .dtc-masonry__caption { position:absolute; bottom:0; left:0; right:0; padding:1.2rem 1rem; background:linear-gradient(transparent,rgba(0,0,0,0.7)); color:#fff; opacity:0; transition:opacity 0.35s; pointer-events:none; }
+    .dtc-masonry__item:hover .dtc-masonry__caption { opacity:1; }
+    .dtc-masonry__caption span { display:block; font-family:var(--font-body); font-size:0.78rem; line-height:1.55; font-weight:300; letter-spacing:0.01em; }
 
     /* CTA Banner */
     .dtc-cta { text-align:center; padding:clamp(4rem,8vw,6rem) 0; }
@@ -160,18 +163,18 @@
           <h2 class="dtc-section__title">Every finish. Every angle.<br>Every detail.</h2>
         </div>
         <div class="dtc-masonry reveal">
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/IMG_7719.JPG" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet1.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet2.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet3.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet4.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet5.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet6.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet7.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet8.jpg" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/桌几/IMG_7720.JPG" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/桌几/IMG_7722.JPG" alt="The Storage Collection" loading="lazy"></div>
-          <div class="dtc-masonry__item"><img src="../../assets/桌几/mp-desk1.jpg" alt="The Storage Collection" loading="lazy"></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/IMG_7719.JPG" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>English-dovetailed drawers at every corner. A joint that strengthens as the wood moves through the seasons.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet1.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Full-extension drawer glides rated for 100 pounds. Open it fully. Load it completely. It will glide.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet2.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Solid brass shelf pins. Not plastic. Not chromed zinc. Brass — because some details are worth the trouble.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet3.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Soft-close hardware catches every door in its last inch of travel. The sound of a cabinet closing should be a quiet click.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet4.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>The back panel is finished to the same standard as the front. Because someday you might see both.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet5.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Solid wood shelves, not veneered MDF. Adjust them without worrying about the clips tearing out.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet6.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Hand-rubbed matte lacquer on every surface — inside the drawers, behind the doors, on the back panel.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet7.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Mortise-and-tenon leg joints on every table. A coffee table should not wobble when you put your feet up.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/柜类/mp-cabinet8.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>No particle board. No stapled back panels. No drawer bottoms that bow under the weight of a few sweaters.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/桌几/IMG_7720.JPG" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Every edge is hand-softened. No sharp corners at shin height. Your legs will thank us.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/桌几/IMG_7722.JPG" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>Solid hardwood top. Hand-sanded through five grits until the surface feels almost soft to the touch.</span></div></div>
+          <div class="dtc-masonry__item"><img src="../../assets/桌几/mp-desk1.jpg" alt="The Storage Collection" loading="lazy"><div class="dtc-masonry__caption"><span>The cabinet that looks as good from the back as it does from the front. Place it anywhere.</span></div></div>
         </div>
       </div>
     </section>
