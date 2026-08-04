@@ -1567,6 +1567,13 @@ button {
   .header__inner { padding: 0 1rem; }
   .header__logo { font-size: 1.3rem; }
 
+  /* Force dark elements on mobile (override header--light white-on-transparent) */
+  .header .header__logo { color: var(--color-charcoal); }
+  .header .header__link { color: var(--color-charcoal); }
+  .header .header__icon-btn { color: var(--color-charcoal); }
+  .header .header__menu-toggle span { background: var(--color-charcoal); }
+  .header--light .header__menu-toggle span { background: var(--color-charcoal); }
+
   /* Hamburger - make it visible and tappable */
   .header__menu-toggle {
     display: flex;
