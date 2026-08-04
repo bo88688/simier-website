@@ -359,17 +359,13 @@ button {
    HERO
    ============================================================ */
 .hero {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background: var(--color-warm-white);
   padding-top: var(--header-height);
-  z-index: 0;
 }
 
 .hero::after {
@@ -2892,7 +2888,6 @@ button {
 .logistics {
   padding: clamp(4rem, 8vw, 6rem) 0;
   background: var(--color-warm-white);
-  margin-top: 100vh;
 }
 .logistics .section-header { margin-bottom: clamp(2rem, 4vw, 3rem); }
 
