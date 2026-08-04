@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>产品图库 — SIMIER Furniture</title>
-  <meta name="description" content="SIMIER 全系列产品图库 — 坐具、餐厅、卧室、柜类、桌几。浏览我们所有的家具作品。">
+  <title>Product Gallery — The Complete SIMIER Collection</title>
+  <meta name="description" content="Browse the full SIMIER collection — sofas, dining, beds, storage, and Sen Yi Da Shi. Every piece crafted in our Guangdong workshop.">
+  <link rel="canonical" href="https://www.simier.top/pages/gallery.html">
+  <link rel="preload" as="image" href="../assets/坐具/IMG_7724.JPG" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <style>
+    .gallery-categories { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:clamp(3rem,5vw,5rem); }
+    .gallery-cat-card { position:relative; aspect-ratio:4/5; border-radius:4px; overflow:hidden; background-size:cover; background-position:center; transition:transform 0.35s var(--ease-out-expo); }
+    .gallery-cat-card:hover { transform:translateY(-6px); }
+    .gallery-cat-card__overlay { position:absolute; inset:0; background:linear-gradient(0deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 60%); z-index:1; }
+    .gallery-cat-card__content { position:absolute; bottom:2rem; left:1.5rem; right:1.5rem; z-index:2; color:#fff; }
+    .gallery-cat-card__content h3 { font-family:var(--font-display); font-size:1.4rem; font-weight:500; margin-bottom:0.3rem; }
+    .gallery-cat-card__content p { font-size:0.8rem; color:rgba(255,255,255,0.7); line-height:1.5; }
     .gallery-tabs { display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; margin-bottom:clamp(2rem,4vw,3rem); }
     .gallery-tab { padding:0.55rem 1.5rem; border-radius:100px; font-size:0.78rem; cursor:pointer; transition:all 0.25s; background:var(--color-warm-white); color:#777; border:1px solid var(--color-border); font-family:var(--font-body-cn); }
     .gallery-tab:hover { color:var(--color-charcoal); border-color:var(--color-taupe); }
@@ -18,11 +27,9 @@
     .gallery-item { break-inside:avoid; margin-bottom:1rem; border-radius:4px; overflow:hidden; transition:transform 0.3s var(--ease-out-expo); cursor:pointer; background:var(--color-stone); }
     .gallery-item:hover { transform:scale(1.02); }
     .gallery-item img { width:100%; display:block; }
-    .gallery-item__overlay { position:absolute; bottom:0; left:0; right:0; padding:1rem; background:linear-gradient(transparent,rgba(0,0,0,0.6)); color:#fff; opacity:0; transition:opacity 0.3s; }
-    .gallery-item:hover .gallery-item__overlay { opacity:1; }
-    @media(max-width:900px){ .gallery-masonry{columns:3} }
-    @media(max-width:600px){ .gallery-masonry{columns:2} }
-    @media(max-width:400px){ .gallery-masonry{columns:1} }
+    .gallery-intro { text-align:center; max-width:640px; margin:0 auto clamp(3rem,5vw,5rem); font-size:0.95rem; color:#888; line-height:1.9; }
+    @media(max-width:900px){ .gallery-categories{grid-template-columns:repeat(2,1fr)} .gallery-masonry{columns:3} }
+    @media(max-width:600px){ .gallery-categories{grid-template-columns:1fr} .gallery-masonry{columns:2} }
   </style>
 </head>
 <body>
@@ -50,30 +57,73 @@
   </header>
 
   <main>
-    <section class="page-hero" style="height:35vh;min-height:280px;">
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero" style="height:45vh;min-height:340px;">
       <div class="page-hero__bg" style="background-image: url('../assets/坐具/IMG_7724.JPG')"></div>
-      <div class="page-hero__content">
-        <p class="hero__eyebrow" data-i18n="gallery.hero_eyebrow">Full Collection</p>
-        <h1 class="hero__title" data-i18n="gallery.hero_title">Product Gallery</h1>
-        <p class="hero__subtitle" data-i18n="gallery.hero_sub">Every piece, crafted in our Guangdong workshop</p>
+      <div class="factory-hero__overlay" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.5));z-index:1;"></div>
+      <div class="page-hero__content" style="z-index:2;">
+        <p class="hero__eyebrow" data-i18n="gallery.hero_eyebrow">The Complete Collection</p>
+        <h1 class="hero__title">Every Piece<br>Has a Story</h1>
+        <p class="hero__subtitle">183 products. Five collections. One workshop in Guangdong — where each piece is made with the same hands, the same care, the same quiet conviction that good things take time.</p>
       </div>
     </section>
 
+    <!-- ===== CATEGORY CARDS ===== -->
     <section class="sendayi-page-section">
       <div class="container">
-        <div class="gallery-tabs reveal">
-          <button class="gallery-tab gallery-tab--active" data-filter="all" data-i18n="gallery.tab_all">All</button>
-          <button class="gallery-tab" data-filter="seating" data-i18n="gallery.tab_seating">Sofas & Chairs</button>
-          <button class="gallery-tab" data-filter="dining" data-i18n="gallery.tab_dining">Dining</button>
-          <button class="gallery-tab" data-filter="bedroom" data-i18n="gallery.tab_bedroom">Bedroom</button>
-          <button class="gallery-tab" data-filter="storage" data-i18n="gallery.tab_storage">Storage & Tables</button>
-          <button class="gallery-tab" data-filter="sendayi" data-i18n="gallery.tab_sendayi">森怡大时</button>
+        <div class="section-header reveal">
+          <p class="section-header__eyebrow">Browse by Collection</p>
+          <h2 class="section-header__title">Five Categories<br>One Standard</h2>
         </div>
-
-        <div class="gallery-masonry reveal" id="galleryGrid">
+        <p class="gallery-intro reveal">Each collection tells a different chapter of the SIMIER story. Click through to explore the full visual catalog — every finish, every angle, every detail.</p>
+        <div class="gallery-categories reveal">
+          <a href="gallery/seating.html" class="gallery-cat-card" style="background-image:url('../assets/坐具/IMG_7724.JPG')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>Sofas & Armchairs</h3>
+              <p>45 pieces — from compact apartment sofas to generous sectionals</p>
+            </div>
+          </a>
+          <a href="gallery/dining.html" class="gallery-cat-card" style="background-image:url('../assets/餐厅/IMG_7723.JPG')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>Dining Tables & Chairs</h3>
+              <p>24 pieces — tables for two to twelve, chairs for every occasion</p>
+            </div>
+          </a>
+          <a href="gallery/bedroom.html" class="gallery-cat-card" style="background-image:url('../assets/卧室/IMG_7718.JPG')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>Beds & Bedroom</h3>
+              <p>36 pieces — frames, headboards, and the sanctuary you deserve</p>
+            </div>
+          </a>
+          <a href="gallery/storage.html" class="gallery-cat-card" style="background-image:url('../assets/柜类/IMG_7719.JPG')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>Storage & Side Tables</h3>
+              <p>43 pieces — cabinets, sideboards, coffee tables, consoles</p>
+            </div>
+          </a>
+          <a href="gallery/sendayi.html" class="gallery-cat-card" style="background-image:url('../assets/森怡大时/sendayi-07.jpg')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>Sen Yi Da Shi</h3>
+              <p>35 pieces — Chinese heritage collection with Ruanti weaving craft</p>
+            </div>
+          </a>
+          <a href="factory.html" class="gallery-cat-card" style="background-image:url('../assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG')">
+            <div class="gallery-cat-card__overlay"></div>
+            <div class="gallery-cat-card__content">
+              <h3>The Workshop</h3>
+              <p>56 photos — step inside our Guangdong atelier</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -84,287 +134,18 @@
           <p class="footer__tagline" data-i18n="footer.tagline">Made with intention.<br>Crafted in our Guangdong workshop.</p>
           <div class="footer__social"><a href="#">IG</a><a href="#">PI</a><a href="#">RED</a></div>
         </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Products</h4>
-          <ul class="footer__links">
-            <li><a href="seating.html">Sofas & Armchairs</a></li>
-            <li><a href="dining.html">Dining Tables & Chairs</a></li>
-            <li><a href="bedroom.html">Beds</a></li>
-            <li><a href="storage.html">Storage & Tables</a></li>
-            <li><a href="sendayi.html">森怡大时</a></li>
-            <li><a href="gallery.html">Product Gallery</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Company</h4>
-          <ul class="footer__links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="factory.html">Factory Tour</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="mailto:hello@simier.top">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Support</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:hello@simier.top">Shipping & Returns</a></li>
-            <li><a href="mailto:hello@simier.top">Care Guide</a></li>
-            <li><a href="mailto:hello@simier.top">Trade Program</a></li>
-            <li><a href="mailto:hello@simier.top">Custom Orders</a></li>
-          </ul>
-        </div>
+        <div class="footer__col"><h4 class="footer__heading">Products</h4><ul class="footer__links"><li><a href="seating.html">Sofas & Armchairs</a></li><li><a href="dining.html">Dining</a></li><li><a href="bedroom.html">Beds</a></li><li><a href="storage.html">Storage & Tables</a></li><li><a href="sendayi.html">森怡大时</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+        <div class="footer__col"><h4 class="footer__heading">Company</h4><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="factory.html">Factory Tour</a></li><li><a href="partners.html">Partners</a></li><li><a href="mailto:hello@simier.top">Contact</a></li></ul></div>
+        <div class="footer__col"><h4 class="footer__heading">Support</h4><ul class="footer__links"><li><a href="mailto:hello@simier.top">Shipping & Returns</a></li><li><a href="mailto:hello@simier.top">Care Guide</a></li><li><a href="mailto:hello@simier.top">Trade Program</a></li><li><a href="mailto:hello@simier.top">Custom Orders</a></li></ul></div>
       </div>
-      <div class="footer__bottom">
-        <p>&copy; 2026 Guangdong SIMIER Home Furnishing Co., Ltd.</p>
-        <p class="footer__location">Foshan, Guangdong, China — Sud de la France — California — Istanbul</p>
-      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Guangdong SIMIER Home Furnishing Co., Ltd.</p><p class="footer__location">Foshan, Guangdong, China — Sud de la France — California — Istanbul</p></div>
     </div>
   </footer>
 
   <div class="chat-widget" id="chatWidget">
     <button class="chat-widget__bubble" id="chatBubble"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></button>
-    <div class="chat-widget__panel" id="chatPanel">
-      <div class="chat-widget__header"><span>SIMIER Assistant</span><button class="chat-widget__close" id="chatClose">×</button></div>
-      <div class="chat-widget__messages" id="chatMessages"><div class="chat-widget__msg chat-widget__msg--bot">Hello! 👋 Ask me about our products, materials, or custom orders!</div></div>
-      <div class="chat-widget__quick" id="chatQuick">
-        <button class="chat-widget__quick-btn">🛋️ Browse sofas</button>
-        <button class="chat-widget__quick-btn">🪵 What materials?</button>
-        <button class="chat-widget__quick-btn">📐 Custom orders?</button>
-      </div>
-      <form class="chat-widget__input" id="chatInputForm">
-        <input type="text" id="chatInput" placeholder="Ask me anything...">
-        <button type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
-      </form>
-    </div>
+    <div class="chat-widget__panel" id="chatPanel"><div class="chat-widget__header"><span>SIMIER Assistant</span><button class="chat-widget__close" id="chatClose">×</button></div><div class="chat-widget__messages" id="chatMessages"><div class="chat-widget__msg chat-widget__msg--bot">Hello! Ask me about our furniture, materials, or custom orders.</div></div><form class="chat-widget__input" id="chatInputForm"><input type="text" id="chatInput" placeholder="Ask me anything..."><button type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></form></div>
   </div>
-
-  <script>
-  // Image data
-  var images = {
-    "坐具": [
-        "../assets/坐具/IMG_0210.jpg",
-        "../assets/坐具/IMG_7719.JPG",
-        "../assets/坐具/IMG_7724.JPG",
-        "../assets/坐具/IMG_7725.JPG",
-        "../assets/坐具/mp-chair1.jpg",
-        "../assets/坐具/mp-chair2.jpg",
-        "../assets/坐具/mp-sofa1-detail.jpg",
-        "../assets/坐具/mp-sofa1.jpg",
-        "../assets/坐具/mp-sofa10.jpg",
-        "../assets/坐具/mp-sofa2-detail.jpg",
-        "../assets/坐具/mp-sofa2.jpg",
-        "../assets/坐具/mp-sofa3.jpg",
-        "../assets/坐具/mp-sofa4.jpg",
-        "../assets/坐具/mp-sofa5.jpg",
-        "../assets/坐具/mp-sofa6.jpg",
-        "../assets/坐具/mp-sofa7.jpg",
-        "../assets/坐具/mp-sofa8.jpg",
-        "../assets/坐具/mp-sofa9.jpg",
-        "../assets/坐具/web-1571459.jpg",
-        "../assets/坐具/web-1571460.jpg",
-        "../assets/坐具/web-1643383.jpg",
-        "../assets/坐具/web-1866146.jpg",
-        "../assets/坐具/web-1866149.jpg",
-        "../assets/坐具/web-2116470.jpg",
-        "../assets/坐具/web-2251245.jpg",
-        "../assets/坐具/web-2750362.jpg",
-        "../assets/坐具/web-276583.jpg",
-        "../assets/坐具/web-2954892.jpg",
-        "../assets/坐具/web-2986011.jpg",
-        "../assets/坐具/web-3144580.jpg",
-        "../assets/坐具/web-3144580b.jpg",
-        "../assets/坐具/web-3634835.jpg",
-        "../assets/坐具/web-3705539.jpg",
-        "../assets/坐具/web-3757055.jpg",
-        "../assets/坐具/web-3805474.jpg",
-        "../assets/坐具/web-4107289.jpg",
-        "../assets/坐具/web-4352247.jpg",
-        "../assets/坐具/web-4475923.jpg",
-        "../assets/坐具/web-4846436.jpg",
-        "../assets/坐具/web-4974916.jpg",
-        "../assets/坐具/web-5341720.jpg",
-        "../assets/坐具/web-5341726.jpg",
-        "../assets/坐具/web-5824901.jpg",
-        "../assets/坐具/web-5997985.jpg",
-        "../assets/坐具/web-6678382.jpg"
-    ],
-    "餐厅": [
-        "../assets/餐厅/IMG_7721.JPG",
-        "../assets/餐厅/IMG_7723.JPG",
-        "../assets/餐厅/mp-table1.jpg",
-        "../assets/餐厅/mp-table2.jpg",
-        "../assets/餐厅/mp-table3.jpg",
-        "../assets/餐厅/web-1080721.jpg",
-        "../assets/餐厅/web-1571467.jpg",
-        "../assets/餐厅/web-1643389.jpg",
-        "../assets/餐厅/web-2082089.jpg",
-        "../assets/餐厅/web-2082090.jpg",
-        "../assets/餐厅/web-2092061.jpg",
-        "../assets/餐厅/web-2116470b.jpg",
-        "../assets/餐厅/web-2710803.jpg",
-        "../assets/餐厅/web-3144581.jpg",
-        "../assets/餐厅/web-3634840.jpg",
-        "../assets/餐厅/web-3914752.jpg",
-        "../assets/餐厅/web-4475924.jpg",
-        "../assets/餐厅/web-4846459.jpg",
-        "../assets/餐厅/web-5824906.jpg",
-        "../assets/餐厅/web-5998123.jpg",
-        "../assets/餐厅/web-6480712.jpg",
-        "../assets/餐厅/web-6480712b.jpg",
-        "../assets/餐厅/web-6964067.jpg",
-        "../assets/餐厅/web-6964067b.jpg"
-    ],
-    "卧室": [
-        "../assets/卧室/IMG_7718.JPG",
-        "../assets/卧室/mp-bed1-detail.jpg",
-        "../assets/卧室/mp-bed1.jpg",
-        "../assets/卧室/mp-bed10.jpg",
-        "../assets/卧室/mp-bed2.jpg",
-        "../assets/卧室/mp-bed3.jpg",
-        "../assets/卧室/mp-bed4.jpg",
-        "../assets/卧室/mp-bed5.jpg",
-        "../assets/卧室/mp-bed6.jpg",
-        "../assets/卧室/mp-bed7.jpg",
-        "../assets/卧室/mp-bed8.jpg",
-        "../assets/卧室/mp-bed9.jpg",
-        "../assets/卧室/mp-cabinet1.jpg",
-        "../assets/卧室/web-1643384.jpg",
-        "../assets/卧室/web-1643384b.jpg",
-        "../assets/卧室/web-2029694.jpg",
-        "../assets/卧室/web-2710804.jpg",
-        "../assets/卧室/web-2710804b.jpg",
-        "../assets/卧室/web-279648.jpg",
-        "../assets/卧室/web-2986012.jpg",
-        "../assets/卧室/web-3634837.jpg",
-        "../assets/卧室/web-3705540.jpg",
-        "../assets/卧室/web-3705542.jpg",
-        "../assets/卧室/web-3756845.jpg",
-        "../assets/卧室/web-4352248.jpg",
-        "../assets/卧室/web-4475925.jpg",
-        "../assets/卧室/web-4846460.jpg",
-        "../assets/卧室/web-4974917.jpg",
-        "../assets/卧室/web-4974917b.jpg",
-        "../assets/卧室/web-5341721.jpg",
-        "../assets/卧室/web-5824907.jpg",
-        "../assets/卧室/web-5998124.jpg",
-        "../assets/卧室/web-5998124b.jpg",
-        "../assets/卧室/web-6678383.jpg",
-        "../assets/卧室/web-6964068.jpg",
-        "../assets/卧室/web-90319.jpg"
-    ],
-    "柜类": [
-        "../assets/柜类/IMG_7719.JPG",
-        "../assets/柜类/mp-cabinet1.jpg",
-        "../assets/柜类/mp-cabinet2.jpg",
-        "../assets/柜类/mp-cabinet3.jpg",
-        "../assets/柜类/mp-cabinet4.jpg",
-        "../assets/柜类/mp-cabinet5.jpg",
-        "../assets/柜类/mp-cabinet6.jpg",
-        "../assets/柜类/mp-cabinet7.jpg",
-        "../assets/柜类/mp-cabinet8.jpg",
-        "../assets/柜类/web-1571461.jpg",
-        "../assets/柜类/web-1571461b.jpg",
-        "../assets/柜类/web-1643385.jpg",
-        "../assets/柜类/web-1643385b.jpg",
-        "../assets/柜类/web-1866145.jpg",
-        "../assets/柜类/web-2710805.jpg",
-        "../assets/柜类/web-2794720.jpg",
-        "../assets/柜类/web-2905238.jpg",
-        "../assets/柜类/web-2986013.jpg",
-        "../assets/柜类/web-3634838.jpg",
-        "../assets/柜类/web-4352249.jpg",
-        "../assets/柜类/web-4846461.jpg",
-        "../assets/柜类/web-5341722.jpg",
-        "../assets/柜类/web-5824908.jpg",
-        "../assets/柜类/web-5998125.jpg",
-        "../assets/柜类/web-6964069.jpg"
-    ],
-    "桌几": [
-        "../assets/桌几/IMG_7720.JPG",
-        "../assets/桌几/IMG_7722.JPG",
-        "../assets/桌几/mp-desk1.jpg",
-        "../assets/桌几/web-1571462.jpg",
-        "../assets/桌几/web-2179214.jpg",
-        "../assets/桌几/web-2710806.jpg",
-        "../assets/桌几/web-2794721.jpg",
-        "../assets/桌几/web-2986014.jpg",
-        "../assets/桌几/web-3634839.jpg",
-        "../assets/桌几/web-3705541.jpg",
-        "../assets/桌几/web-3965520.jpg",
-        "../assets/桌几/web-4352250.jpg",
-        "../assets/桌几/web-4846462.jpg",
-        "../assets/桌几/web-4846462b.jpg",
-        "../assets/桌几/web-5341723.jpg",
-        "../assets/桌几/web-5824909.jpg",
-        "../assets/桌几/web-5998126.jpg",
-        "../assets/桌几/web-6964070.jpg"
-    ],
-    "sendayi": [
-        "../assets/森怡大时/IMG_0210.jpg",
-        "../assets/森怡大时/jjkjjk.jpg",
-        "../assets/森怡大时/lounge-chair-green.jpg",
-        "../assets/森怡大时/sendayi-01.jpg",
-        "../assets/森怡大时/sendayi-02.jpg",
-        "../assets/森怡大时/sendayi-03.jpg",
-        "../assets/森怡大时/sendayi-04.jpg",
-        "../assets/森怡大时/sendayi-05.jpg",
-        "../assets/森怡大时/sendayi-06.jpg",
-        "../assets/森怡大时/sendayi-07.jpg",
-        "../assets/森怡大时/sendayi-08.jpg",
-        "../assets/森怡大时/sendayi-09.jpg",
-        "../assets/森怡大时/sendayi-10.jpg",
-        "../assets/森怡大时/sendayi-11.jpg",
-        "../assets/森怡大时/sendayi-12.jpg",
-        "../assets/森怡大时/sendayi-13.jpg",
-        "../assets/森怡大时/sendayi-14.jpg",
-        "../assets/森怡大时/sendayi-15.jpg",
-        "../assets/森怡大时/sendayi-16.jpg",
-        "../assets/森怡大时/sendayi-17.jpg",
-        "../assets/森怡大时/sendayi-18.jpg",
-        "../assets/森怡大时/sendayi-19.jpg",
-        "../assets/森怡大时/sendayi-20.jpg",
-        "../assets/森怡大时/sendayi-21.jpg",
-        "../assets/森怡大时/sendayi-22.jpg",
-        "../assets/森怡大时/sendayi-23.jpg",
-        "../assets/森怡大时/sendayi-24.jpg",
-        "../assets/森怡大时/sendayi-25.jpg",
-        "../assets/森怡大时/sendayi-26.jpg",
-        "../assets/森怡大时/sendayi-27.jpg",
-        "../assets/森怡大时/sendayi-28.jpg",
-        "../assets/森怡大时/微信图片_20260512215855_13805_232.jpg",
-        "../assets/森怡大时/微信图片_20260512220300_13808_232.jpg",
-        "../assets/森怡大时/微信图片_20260512222812_13812_232.jpg",
-        "../assets/森怡大时/微信图片_20260512222812_13813_232.jpg"
-    ]
-};
-
-  var grid = document.getElementById('galleryGrid');
-  var tabs = document.querySelectorAll('.gallery-tab');
-  var currentFilter = 'all';
-
-  function render(filter) {
-    var items = [];
-    if (filter === 'all') {
-      Object.values(images).forEach(function(arr) { items = items.concat(arr); });
-    } else {
-      items = images[filter] || [];
-    }
-    grid.innerHTML = items.map(function(src) {
-      return '<div class="gallery-item"><img src="' + src + '" alt="SIMIER Furniture" loading="lazy"></div>';
-    }).join('');
-  }
-
-  tabs.forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      tabs.forEach(function(t) { t.classList.remove('gallery-tab--active'); });
-      tab.classList.add('gallery-tab--active');
-      currentFilter = tab.getAttribute('data-filter');
-      render(currentFilter);
-    });
-  });
-
-  render('all');
-  </script>
 
   <script src="../js/main.js"></script>
   <script src="../js/cart.js"></script>
