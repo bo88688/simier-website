@@ -26,8 +26,6 @@
     .ft-stats__number { font-family:var(--font-display); font-size:clamp(2rem,4vw,3rem); color:var(--color-charcoal); display:block; line-height:1; }
     .ft-stats__label { font-size:0.75rem; color:var(--color-taupe); margin-top:0.5rem; display:block; }
     .ft-row { display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,6rem); align-items:center; }
-    .ft-row--reverse .ft-row__image { order:2; }
-    .ft-row--reverse .ft-row__text { order:1; }
     .ft-row__image { aspect-ratio:4/5; background-size:cover; background-position:center; border-radius:4px; background-color:var(--color-stone); }
     .ft-row__text h3 { font-family:var(--font-display); font-size:1.5rem; font-weight:400; margin-bottom:1rem; color:var(--color-charcoal); }
     .ft-row__text p { font-size:0.93rem; line-height:2; color:#777; margin-bottom:0.75rem; }
@@ -39,7 +37,7 @@
     @media(max-width:768px){
       .ft-stats{grid-template-columns:repeat(2,1fr)}
       .ft-row{grid-template-columns:1fr}
-      .ft-row__image{order:-1;aspect-ratio:3/2}
+      .ft-row__image{aspect-ratio:3/2}
       .ft-gallery{grid-template-columns:repeat(2,1fr)}
     }
   </style>
@@ -113,11 +111,11 @@
     <section class="ft-section">
       <div class="container">
         <div class="ft-row reveal">
-          <div class="ft-row__image" style="background-image:url('../assets/工厂/0b7978a74016f9bde6340461468355a9.JPG')"></div>
           <div class="ft-row__text">
             <h3 data-i18n="factory.step1.title">1. Material Selection &amp; Cutting</h3>
             <p data-i18n="factory.step1.d1_label">Every piece of wood is hand-selected for grain, color, and stability. No two boards are the same — and we treat each one accordingly. Our cutters average 12 years of experience. They read the grain the way a chef reads a recipe.</p>
           </div>
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/0b7978a74016f9bde6340461468355a9.JPG')"></div>
         </div>
       </div>
     </section>
@@ -125,12 +123,12 @@
     <!-- ===== PROCESS: ASSEMBLY ===== -->
     <section class="ft-section ft-section--dark">
       <div class="container">
-        <div class="ft-row ft-row--reverse reveal">
-          <div class="ft-row__image" style="background-image:url('../assets/工厂/0c83c2b328c51392e8f834a4594c8c46.JPG')"></div>
+        <div class="ft-row reveal">
           <div class="ft-row__text">
             <h3 data-i18n="factory.step2.title">2. Frame Assembly &amp; Joinery</h3>
             <p data-i18n="factory.step2.d1_label">Mortise and tenon. Double dowel. Corner block. These are not buzzwords — they are the joints that determine whether a sofa creaks on year two or stays silent for decades. Every frame is assembled by hand, squared by eye, and checked with a level before it moves forward.</p>
           </div>
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/0c83c2b328c51392e8f834a4594c8c46.JPG')"></div>
         </div>
       </div>
     </section>
@@ -139,11 +137,11 @@
     <section class="ft-section">
       <div class="container">
         <div class="ft-row reveal">
-          <div class="ft-row__image" style="background-image:url('../assets/工厂/1124ac009e71f0a10641d8eae841fef6.JPG')"></div>
           <div class="ft-row__text">
             <h3 data-i18n="factory.step3.title">3. Upholstery &amp; Finishing</h3>
             <p data-i18n="factory.step3.d1_label">Fabric is stretched, stapled, and trimmed by hand. Seams are double-stitched. Cushions are filled to precise densities — specified per seat, per backrest, per arm. The difference between a good sofa and a great one is in the tension of a single seam.</p>
           </div>
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/1124ac009e71f0a10641d8eae841fef6.JPG')"></div>
         </div>
       </div>
     </section>
