@@ -4,15 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Factory Tour — Where SIMIER Pieces Come to Life</title>
-  <meta name="description" content="Step inside our Foshan, Guangdong atelier. See the hands, the materials, and the craft behind every SIMIER piece.">
+  <meta name="description" content="Step inside our Foshan, Guangdong atelier.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .ft-hero { position:relative; height:100vh; min-height:600px; display:flex; align-items:center; overflow:hidden; background:#1a1a1a; }
+    .ft-hero__bg { position:absolute; inset:0; background-size:cover; background-position:center; }
+    .ft-hero__overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5)); z-index:1; }
+    .ft-hero__content { position:relative; z-index:2; color:#fff; max-width:720px; padding:0 clamp(2rem,5vw,4rem); }
+    .ft-hero__eyebrow { font-family:var(--font-body); font-size:0.6rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--color-brass); margin-bottom:1.5rem; }
+    .ft-hero__title { font-family:var(--font-hero); font-size:clamp(2.4rem,5vw,4.5rem); font-weight:400; line-height:1.08; letter-spacing:-0.01em; margin-bottom:1.5rem; }
+    .ft-hero__sub { font-size:1rem; line-height:1.8; color:rgba(255,255,255,0.65); max-width:480px; font-weight:300; }
+    .ft-section { padding:clamp(5rem,10vw,8rem) 0; }
+    .ft-section--dark { background:#1a1a1a; color:#fff; }
+    .ft-section__header { text-align:center; max-width:600px; margin:0 auto clamp(3rem,5vw,5rem); }
+    .ft-section__eyebrow { font-family:var(--font-body); font-size:0.6rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--color-taupe); margin-bottom:1.25rem; }
+    .ft-section--dark .ft-section__eyebrow { color:var(--color-brass); }
+    .ft-section__title { font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.4rem); font-weight:400; line-height:1.2; color:var(--color-charcoal); }
+    .ft-section--dark .ft-section__title { color:#fff; }
+    .ft-section__body { font-size:0.93rem; line-height:2; color:#777; max-width:600px; margin:0 auto; }
+    .ft-section--dark .ft-section__body { color:rgba(255,255,255,0.5); }
+    .ft-section__body p { margin-bottom:1rem; }
+    .ft-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; text-align:center; }
+    .ft-stats__number { font-family:var(--font-display); font-size:clamp(2rem,4vw,3rem); color:var(--color-charcoal); display:block; line-height:1; }
+    .ft-stats__label { font-size:0.75rem; color:var(--color-taupe); margin-top:0.5rem; display:block; }
+    .ft-row { display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,6rem); align-items:center; }
+    .ft-row--reverse .ft-row__image { order:2; }
+    .ft-row--reverse .ft-row__text { order:1; }
+    .ft-row__image { aspect-ratio:4/5; background-size:cover; background-position:center; border-radius:4px; background-color:var(--color-stone); }
+    .ft-row__text h3 { font-family:var(--font-display); font-size:1.5rem; font-weight:400; margin-bottom:1rem; color:var(--color-charcoal); }
+    .ft-row__text p { font-size:0.93rem; line-height:2; color:#777; margin-bottom:0.75rem; }
+    .ft-gallery { display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; }
+    .ft-gallery__item { aspect-ratio:1; background-size:cover; background-position:center; border-radius:3px; background-color:var(--color-stone); }
+    .ft-cta { text-align:center; padding:clamp(4rem,8vw,6rem) 0; background:var(--color-cream); }
+    .ft-cta h3 { font-family:var(--font-display); font-size:1.8rem; font-weight:400; margin-bottom:1rem; }
+    .ft-cta p { font-size:0.93rem; color:#999; max-width:480px; margin:0 auto 2rem; line-height:1.8; }
+    @media(max-width:768px){
+      .ft-stats{grid-template-columns:repeat(2,1fr)}
+      .ft-row{grid-template-columns:1fr}
+      .ft-row__image{order:-1;aspect-ratio:3/2}
+      .ft-gallery{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ====== HEADER ====== -->
   <header class="header header--scrolled" id="header">
     <div class="header__inner">
       <a href="../index.html" class="header__logo">SIMIER</a>
@@ -22,7 +60,7 @@
           <li><a href="about.html" class="header__link" data-i18n="nav.about">About</a></li>
           <li><a href="sendayi.html" class="header__link" data-i18n="nav.sendayi">森怡大时</a></li>
           <li><a href="factory.html" class="header__link header__link--active" data-i18n="nav.factory">Factory</a></li>
-          <li><a href="mailto:hello@simier.top" class="header__link" data-i18n="nav.contact" onclick="openChat();">Partners</a></li>
+          <li><a href="mailto:hello@simier.top" class="header__link" data-i18n="nav.contact" onclick="openChat();">Contact</a></li>
           <li><a href="cart.html" class="header__link">Cart</a></li>
         </ul>
       </nav>
@@ -36,353 +74,137 @@
 
   <main>
 
-    <!-- ========== HERO: always loads immediately ========== -->
-    <section class="factory-hero">
-      <div class="factory-hero__bg" style="background-image: url('../assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG')"></div>
-      <div class="factory-hero__overlay"></div>
-      <div class="factory-hero__content">
-        <p class="factory-hero__eyebrow" data-i18n="factory.hero.eyebrow">Guangdong, China · Est. 2012</p>
-        <h1 class="factory-hero__title" data-i18n="factory.hero.title">Where Our Furniture<br>Comes to Life</h1>
-        <p class="factory-hero__subtitle" data-i18n="factory.hero.subtitle">An honest look inside the workshop — the hands, the tools,<br>and the craft behind every SIMIER piece.</p>
-      </div>
-      <div class="factory-hero__scroll">
-        <span data-i18n="hero.scroll">Scroll</span>
-        <svg width="16" height="24" viewBox="0 0 16 24" fill="none"><rect x="1" y="1" width="14" height="22" rx="7" stroke="currentColor" stroke-width="1"/><circle cx="8" cy="8" r="2" fill="currentColor"/></svg>
+    <!-- ===== HERO ===== -->
+    <section class="ft-hero">
+      <div class="ft-hero__bg" style="background-image:url('../assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG')"></div>
+      <div class="ft-hero__overlay"></div>
+      <div class="ft-hero__content">
+        <p class="ft-hero__eyebrow" data-i18n="factory.hero.eyebrow">Guangdong, China · Est. 2012</p>
+        <h1 class="ft-hero__title" data-i18n="factory.hero.title">Where Our Furniture<br>Comes to Life</h1>
+        <p class="ft-hero__sub" data-i18n="factory.hero.subtitle">An honest look inside the workshop — the hands, the tools, and the craft behind every SIMIER piece.</p>
       </div>
     </section>
 
-    <!-- ========== INTRO ========== -->
-    <section class="factory-intro">
+    <!-- ===== INTRO ===== -->
+    <section class="ft-section">
       <div class="container">
-        <div class="factory-intro__grid">
-          <div class="factory-intro__text">
-            <p class="section-header__eyebrow" data-i18n="factory.intro.eyebrow">The Workshop</p>
-            <h2 class="section-header__title" data-i18n="factory.intro.title">Not Just a Factory.<br>A Place Where Things Are Made Right.</h2>
-            <div class="factory-intro__body">
-              <p data-i18n="factory.intro.p1">Walk into our Foshan workshop on any given Tuesday, and you'll see the same thing: people who genuinely care about the piece in front of them. A cutter measuring twice before touching blade to fabric. A finisher running their hand along a seam, checking for a smoothness only fingertips can detect. A QC inspector turning a chair frame over, looking — really looking — at every joint.</p>
-              <p data-i18n="factory.intro.p2">This isn't a show. It's just how we work.</p>
-              <p data-i18n="factory.intro.p3">We don't believe in "good enough." Every SIMIER product passes through 27 distinct quality checkpoints before it earns the right to ship. That sounds like a lot. It is. But when your furniture is going to live in someone's home — in the light of a California morning or the quiet of a Paris evening — it deserves that kind of attention.</p>
-              <p data-i18n="factory.intro.p4">This page is a tour of where it all happens. You'll see the floor, meet some of the team, and get a sense of how a sketch on a designer's desk becomes the sofa in your living room.</p>
-            </div>
-          </div>
-          <div class="factory-intro__image lazy-bg" data-bg="../assets/工厂/0abffc08760927603ec38d34cc8fbda6.JPG"></div>
+        <div class="ft-section__header reveal">
+          <p class="ft-section__eyebrow" data-i18n="factory.intro.eyebrow">The Workshop</p>
+          <h2 class="ft-section__title" data-i18n="factory.intro.title">Not Just a Factory. A Place Where Things Are Made Right.</h2>
+        </div>
+        <div class="ft-section__body reveal">
+          <p data-i18n="factory.intro.p1">Walk into our Foshan workshop on any given Tuesday, and you will see the same thing: people who genuinely care about the piece in front of them. A cutter measuring twice before touching blade to fabric. A finisher running their hand along a seam, checking for a smoothness only fingertips can detect.</p>
+          <p data-i18n="factory.intro.p3">Every SIMIER product passes through 27 distinct quality checkpoints before it earns the right to ship. That sounds like a lot. It is. But when your furniture is going to live in someone's home — it deserves that kind of attention.</p>
         </div>
       </div>
     </section>
 
-    <!-- ========== STATS BAR ========== -->
-    <section class="factory-stats">
+    <!-- ===== STATS ===== -->
+    <section class="ft-section ft-section--dark">
       <div class="container">
-        <div class="factory-stats__grid">
-          <div class="factory-stats__item">
-            <span class="factory-stats__number">27</span>
-            <span class="factory-stats__label" data-i18n="factory.stats.qc">Quality Checkpoints</span>
-            <span class="factory-stats__detail" data-i18n="factory.stats.qc.detail">Every piece, no exceptions</span>
-          </div>
-          <div class="factory-stats__item">
-            <span class="factory-stats__number">14</span>
-            <span class="factory-stats__label" data-i18n="factory.stats.years">Years in Operation</span>
-            <span class="factory-stats__detail" data-i18n="factory.stats.years.detail">Est. 2012, Foshan</span>
-          </div>
-          <div class="factory-stats__item">
-            <span class="factory-stats__number">120+</span>
-            <span class="factory-stats__label" data-i18n="factory.stats.people">Skilled Craftspeople</span>
-            <span class="factory-stats__detail" data-i18n="factory.stats.people.detail">Average tenure: 8 years</span>
-          </div>
-          <div class="factory-stats__item">
-            <span class="factory-stats__number">30+</span>
-            <span class="factory-stats__label" data-i18n="factory.stats.countries">Countries Shipped</span>
-            <span class="factory-stats__detail" data-i18n="factory.stats.countries.detail">France, USA, Turkey, UAE &amp; beyond</span>
-          </div>
+        <div class="ft-stats reveal">
+          <div><span class="ft-stats__number">27</span><span class="ft-stats__label" data-i18n="factory.stats.qc">Quality Checkpoints</span></div>
+          <div><span class="ft-stats__number">14</span><span class="ft-stats__label" data-i18n="factory.stats.years">Years in Operation</span></div>
+          <div><span class="ft-stats__number">120+</span><span class="ft-stats__label" data-i18n="factory.stats.people">Skilled Craftspeople</span></div>
+          <div><span class="ft-stats__number">30+</span><span class="ft-stats__label" data-i18n="factory.stats.countries">Countries Shipped</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== PROCESS ========== -->
-    <section class="factory-process">
+    <!-- ===== PROCESS: CUT ===== -->
+    <section class="ft-section">
       <div class="container">
-        <div class="section-header" style="text-align:center">
-          <p class="section-header__eyebrow" data-i18n="factory.process.eyebrow">From Raw Material to Your Home</p>
-          <h2 class="section-header__title" data-i18n="factory.process.title">The Journey of a Piece</h2>
-          <p class="section-header__subtitle" data-i18n="factory.process.subtitle">Every sofa, chair, and table follows a deliberate path through our workshop. Here's what that looks like.</p>
-        </div>
-
-        <div class="factory-process__row">
-          <div class="factory-process__image lazy-bg" data-bg="../assets/工厂/0b7978a74016f9bde6340461468355a9.JPG"></div>
-          <div class="factory-process__text">
-            <span class="factory-process__step">01</span>
-            <h3 class="factory-process__title" data-i18n="factory.step1.title">The Frame Comes First</h3>
-            <p data-i18n="factory.step1.desc">Solid kiln-dried ash, oak, or walnut — depending on the design — cut and joined by hand. We use traditional mortise-and-tenon joinery reinforced with corner blocks. No shortcuts. A SIMIER sofa frame carries a 2-year structural warranty because we know exactly how it was built.</p>
-            <div class="factory-process__detail">
-              <div><span data-i18n="factory.step1.d1_label">Wood</span><span data-i18n="factory.step1.d1_val">Solid Ash / Oak / Walnut</span></div>
-              <div><span data-i18n="factory.step1.d2_label">Joinery</span><span data-i18n="factory.step1.d2_val">Mortise &amp; Tenon + Corner Blocks</span></div>
-              <div><span data-i18n="factory.step1.d3_label">Warranty</span><span data-i18n="factory.step1.d3_val">2 Years on Frame</span></div>
-            </div>
+        <div class="ft-row reveal">
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/0b7978a74016f9bde6340461468355a9.JPG')"></div>
+          <div class="ft-row__text">
+            <h3 data-i18n="factory.step1.title">1. Material Selection &amp; Cutting</h3>
+            <p data-i18n="factory.step1.d1_label">Every piece of wood is hand-selected for grain, color, and stability. No two boards are the same — and we treat each one accordingly. Our cutters average 12 years of experience. They read the grain the way a chef reads a recipe.</p>
           </div>
         </div>
-
-        <div class="factory-process__row factory-process__row--reverse">
-          <div class="factory-process__image lazy-bg" data-bg="../assets/工厂/0c83c2b328c51392e8f834a4594c8c46.JPG"></div>
-          <div class="factory-process__text">
-            <span class="factory-process__step">02</span>
-            <h3 class="factory-process__title" data-i18n="factory.step2.title">Layered for Comfort</h3>
-            <p data-i18n="factory.step2.desc">Comfort isn't one density. It's a recipe. We layer high-resilience foam (38–42 kg/m³), feather-down toppers, and Dacron wrapping to create a seat that feels soft when you sit but holds its shape for years. Every cushion is cut, wrapped, and tested on our floor.</p>
-            <div class="factory-process__detail">
-              <div><span data-i18n="factory.step2.d1_label">Core</span><span data-i18n="factory.step2.d1_val">High-Resilience Foam 38–42 kg/m³</span></div>
-              <div><span data-i18n="factory.step2.d2_label">Topper</span><span data-i18n="factory.step2.d2_val">Feather-Down Blend</span></div>
-              <div><span data-i18n="factory.step2.d3_label">Wrap</span><span data-i18n="factory.step2.d3_val">Dacron Fiber</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="factory-process__row">
-          <div class="factory-process__image lazy-bg" data-bg="../assets/工厂/1124ac009e71f0a10641d8eae841fef6.JPG"></div>
-          <div class="factory-process__text">
-            <span class="factory-process__step">03</span>
-            <h3 class="factory-process__title" data-i18n="factory.step3.title">The Fabric, Cut and Sewn</h3>
-            <p data-i18n="factory.step3.desc">Our Italian-imported tech fabrics, velvets, and microfiber arrive on rolls. Each hide or bolt is inspected under daylight lamps for color consistency and flaws. Patterns are laid by hand — never auto-nested by software — because a human eye catches things an algorithm misses. Seams are double-stitched at stress points. Every cover is cut to be removable and machine-washable.</p>
-            <div class="factory-process__detail">
-              <div><span data-i18n="factory.step3.d1_label">Fabrics</span><span data-i18n="factory.step3.d1_val">Italian Tech-Linen / Velvet / Microfiber</span></div>
-              <div><span data-i18n="factory.step3.d2_label">Inspection</span><span data-i18n="factory.step3.d2_val">Daylight-Lamp Color Check</span></div>
-              <div><span data-i18n="factory.step3.d3_label">Feature</span><span data-i18n="factory.step3.d3_val">Removable &amp; Machine-Washable Covers</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="factory-process__row factory-process__row--reverse">
-          <div class="factory-process__image lazy-bg" data-bg="../assets/工厂/1ff06b9a1902c8c3afc092d38a6f5d26.JPG"></div>
-          <div class="factory-process__text">
-            <span class="factory-process__step">04</span>
-            <h3 class="factory-process__title" data-i18n="factory.step4.title">Assembled. Inspected. Signed Off.</h3>
-            <p data-i18n="factory.step4.desc">Frame meets foam meets fabric. Each piece is assembled on a dedicated station by a single craftsperson who sees it through from start to finish. They sign a QC card that stays with the piece. Then it moves to our independent inspection team — a separate group whose only job is to find problems before you do. Their rejection rate averages 12%. We're proud of that number.</p>
-            <div class="factory-process__detail">
-              <div><span data-i18n="factory.step4.d1_label">Assembly</span><span data-i18n="factory.step4.d1_val">Single-Craftsperson Per Piece</span></div>
-              <div><span data-i18n="factory.step4.d2_label">Inspection</span><span data-i18n="factory.step4.d2_val">Independent QC Team, 27 Checkpoints</span></div>
-              <div><span data-i18n="factory.step4.d3_label">Sign-off</span><span data-i18n="factory.step4.d3_val">QC Card on Every Order</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="factory-process__row">
-          <div class="factory-process__image lazy-bg" data-bg="../assets/工厂/2421e9d82ab4c5c06ac1306753d0dd99.JPG"></div>
-          <div class="factory-process__text">
-            <span class="factory-process__step">05</span>
-            <h3 class="factory-process__title" data-i18n="factory.step5.title">Packed to Arrive Perfect</h3>
-            <p data-i18n="factory.step5.desc">We've learned through thousands of shipments what it takes for furniture to survive a container journey intact. Double-wall corrugated cartons. Reinforced corner protectors. Moisture-barrier wrapping for ocean freight. Each package is labeled with handling instructions in the destination language. Our logistics team tracks every container from Foshan port to final delivery.</p>
-            <div class="factory-process__detail">
-              <div><span data-i18n="factory.step5.d1_label">Packaging</span><span data-i18n="factory.step5.d1_val">Double-Wall Cartons + Corner Protectors</span></div>
-              <div><span data-i18n="factory.step5.d2_label">Shipping</span><span data-i18n="factory.step5.d2_val">FCL / LCL from Foshan Port</span></div>
-              <div><span data-i18n="factory.step5.d3_label">Tracking</span><span data-i18n="factory.step5.d3_val">End-to-End Container Visibility</span></div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ========== GALLERY 1 ========== -->
-    <section class="factory-gallery">
-      <div class="factory-gallery__strip">
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/25da7afb7709a44fbb819aa7340ec60b.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/2eb477e70c20b2fc2a4ba4532e344d6e.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/39ea449afb9cc724fc7589c31f50b0be.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/42a280edf203a4eba9a3761bcd64cbe5.JPG"></div>
-      </div>
-    </section>
-
-    <!-- ========== PEOPLE ========== -->
-    <section class="factory-people">
+    <!-- ===== PROCESS: ASSEMBLY ===== -->
+    <section class="ft-section ft-section--dark">
       <div class="container">
-        <div class="section-header" style="text-align:center">
-          <p class="section-header__eyebrow" data-i18n="factory.people.eyebrow">The Hands Behind the Work</p>
-          <h2 class="section-header__title" data-i18n="factory.people.title">People Make the Difference</h2>
-          <p class="section-header__subtitle" data-i18n="factory.people.subtitle">Our workshop isn't just machines and materials. It's a team of 120+ craftspeople, most of whom have been with us for nearly a decade. They know furniture the way a baker knows dough — by feel.</p>
-        </div>
-        <div class="factory-people__grid">
-          <div class="factory-people__card">
-            <div class="factory-people__photo lazy-bg" data-bg="../assets/工厂/7558bfdbc9a7c924a3a0cde652781efd.JPG"></div>
-            <p class="factory-people__role" data-i18n="factory.people.role1">Frame &amp; Joinery Lead</p>
-            <p class="factory-people__tenure" data-i18n="factory.people.tenure1">12 years at SIMIER</p>
-          </div>
-          <div class="factory-people__card">
-            <div class="factory-people__photo lazy-bg" data-bg="../assets/工厂/775e84429429533c477f7d18f166fae2.JPG"></div>
-            <p class="factory-people__role" data-i18n="factory.people.role2">Upholstery Master</p>
-            <p class="factory-people__tenure" data-i18n="factory.people.tenure2">9 years at SIMIER</p>
-          </div>
-          <div class="factory-people__card">
-            <div class="factory-people__photo lazy-bg" data-bg="../assets/工厂/797dc9e85c716f402a0a620286b00383.JPG"></div>
-            <p class="factory-people__role" data-i18n="factory.people.role3">Quality Control Supervisor</p>
-            <p class="factory-people__tenure" data-i18n="factory.people.tenure3">7 years at SIMIER</p>
-          </div>
-          <div class="factory-people__card">
-            <div class="factory-people__photo lazy-bg" data-bg="../assets/工厂/79da276955a8990495a8e32dd734579f.JPG"></div>
-            <p class="factory-people__role" data-i18n="factory.people.role4">Packaging &amp; Logistics Lead</p>
-            <p class="factory-people__tenure" data-i18n="factory.people.tenure4">6 years at SIMIER</p>
+        <div class="ft-row ft-row--reverse reveal">
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/0c83c2b328c51392e8f834a4594c8c46.JPG')"></div>
+          <div class="ft-row__text">
+            <h3 data-i18n="factory.step2.title">2. Frame Assembly &amp; Joinery</h3>
+            <p data-i18n="factory.step2.d1_label">Mortise and tenon. Double dowel. Corner block. These are not buzzwords — they are the joints that determine whether a sofa creaks on year two or stays silent for decades. Every frame is assembled by hand, squared by eye, and checked with a level before it moves forward.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== MATERIALS ========== -->
-    <section class="factory-materials">
+    <!-- ===== PROCESS: UPHOLSTERY ===== -->
+    <section class="ft-section">
       <div class="container">
-        <div class="factory-materials__grid">
-          <div class="factory-materials__image lazy-bg" data-bg="../assets/工厂/8015b3174809376f2d8b0505d9a3d999.JPG"></div>
-          <div class="factory-materials__text">
-            <p class="section-header__eyebrow" data-i18n="factory.materials.eyebrow">Material Integrity</p>
-            <h2 class="section-header__title" data-i18n="factory.materials.title">We Source With Intent. We Build With Care.</h2>
-            <div class="factory-materials__body">
-              <p data-i18n="factory.materials.p1">Every material that enters our workshop is documented, traceable, and inspected. Our wood comes from FSC-certified sources. Our fabrics are imported from Italian mills with decades of textile heritage. Our foams are CertiPUR-certified — no heavy metals, no ozone depleters, no formaldehyde.</p>
-              <p data-i18n="factory.materials.p2">We're not claiming to be the only workshop that cares about materials. But we are one of the few in our category that will open our doors and show you exactly what we use and how we use it.</p>
-              <p data-i18n="factory.materials.p3">Because when you're buying furniture for a home 6,000 miles away, transparency isn't a nice-to-have. It's the whole point.</p>
-            </div>
+        <div class="ft-row reveal">
+          <div class="ft-row__image" style="background-image:url('../assets/工厂/1124ac009e71f0a10641d8eae841fef6.JPG')"></div>
+          <div class="ft-row__text">
+            <h3 data-i18n="factory.step3.title">3. Upholstery &amp; Finishing</h3>
+            <p data-i18n="factory.step3.d1_label">Fabric is stretched, stapled, and trimmed by hand. Seams are double-stitched. Cushions are filled to precise densities — specified per seat, per backrest, per arm. The difference between a good sofa and a great one is in the tension of a single seam.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== GALLERY 2 ========== -->
-    <section class="factory-gallery">
-      <div class="factory-gallery__strip">
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/45b67fecbcc85605d8e72aae2d1a60f1.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/4957b490841f52a916569e1663f80a4a.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/5104068ba5ba5222d144e1ca01d4d1e2.JPG"></div>
-        <div class="factory-gallery__image lazy-bg" data-bg="../assets/工厂/6d66695c9af931d18108b3dbef5a13dd.JPG"></div>
-      </div>
-    </section>
-
-    <!-- ========== CTA ========== -->
-    <section class="factory-cta">
+    <!-- ===== GALLERY ===== -->
+    <section class="ft-section">
       <div class="container">
-        <div class="factory-cta__inner">
-          <p class="section-header__eyebrow" style="color:rgba(255,255,255,0.5)" data-i18n="factory.cta.eyebrow">You're Always Welcome</p>
-          <h2 class="factory-cta__title" data-i18n="factory.cta.title">Come See It for Yourself</h2>
-          <p class="factory-cta__body" data-i18n="factory.cta.body">We host factory visits for distribution partners, interior designers, and press. If you're in Guangdong — or planning to be — reach out. There's nothing quite like seeing a piece come together in person.</p>
-          <div class="factory-cta__actions">
-            <a href="partners.html" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,0.4)" data-i18n="factory.cta.btn1">Become a Partner</a>
-            <a href="mailto:hello@simier.top" class="btn btn--outline" style="color:#fff;border-color:rgba(255,255,255,0.4)" data-i18n="factory.cta.btn2">Schedule a Visit</a>
-          </div>
-          <div class="factory-cta__details">
-            <div>
-              <span data-i18n="factory.cta.address_label">Address</span>
-              <span>SIMIER Furniture, Lecong, Shunde District, Foshan, Guangdong, China</span>
-            </div>
-            <div>
-              <span data-i18n="factory.cta.hours_label">Visiting Hours</span>
-              <span>Monday – Friday, 9:00 AM – 5:00 PM (by appointment)</span>
-            </div>
-          </div>
+        <div class="ft-section__header reveal">
+          <p class="ft-section__eyebrow">Inside the Workshop</p>
+          <h2 class="ft-section__title">The Floor. The Light. The Hands.</h2>
         </div>
+        <div class="ft-gallery reveal">
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/1ff06b9a1902c8c3afc092d38a6f5d26.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/2421e9d82ab4c5c06ac1306753d0dd99.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/25da7afb7709a44fbb819aa7340ec60b.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/2eb477e70c20b2fc2a4ba4532e344d6e.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/39ea449afb9cc724fc7589c31f50b0be.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/42a280edf203a4eba9a3761bcd64cbe5.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/45b67fecbcc85605d8e72aae2d1a60f1.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/4957b490841f52a916569e1663f80a4a.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/5104068ba5ba5222d144e1ca01d4d1e2.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/6d66695c9af931d18108b3dbef5a13dd.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/7558bfdbc9a7c924a3a0cde652781efd.JPG')"></div>
+          <div class="ft-gallery__item" style="background-image:url('../assets/工厂/775e84429429533c477f7d18f166fae2.JPG')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="ft-cta">
+      <div class="container">
+        <h3 data-i18n="factory.cta.title">Come See for Yourself</h3>
+        <p data-i18n="factory.cta.body">We host factory visits for distribution partners, designers, and press. If you are in Guangdong or planning a trip — reach out.</p>
+        <a href="mailto:hello@simier.top?subject=Factory Visit" class="btn btn--primary" data-i18n="factory.cta.btn2">Schedule a Visit</a>
       </div>
     </section>
 
   </main>
 
-  <!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="../index.html" class="footer__logo">SIMIER</a>
-          <p class="footer__tagline">Made with intention.<br>Crafted in our Guangdong workshop.</p>
-          <div class="footer__social"><a href="#">IG</a><a href="#">PI</a><a href="#">RED</a></div>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Products</h4>
-          <ul class="footer__links">
-            <li><a href="seating.html">Sofas &amp; Armchairs</a></li>
-            <li><a href="dining.html">Dining Tables &amp; Chairs</a></li>
-            <li><a href="bedroom.html">Beds</a></li>
-            <li><a href="storage.html">Storage &amp; Tables</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Company</h4>
-          <ul class="footer__links">
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="factory.html">Factory Tour</a></li>
-            <li><a href="partners.html">Distribution Partners</a></li>
-            <li><a href="#">Student Discount</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4 class="footer__heading">Support</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:hello@simier.top">Contact</a></li>
-            <li><a href="#">Global Shipping</a></li>
-            <li><a href="#">Care Guide</a></li>
-            <li><a href="#">B2B Inquiries</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
+        <div class="footer__brand"><a href="../index.html" class="footer__logo">SIMIER</a><p class="footer__tagline" data-i18n="footer.tagline">Made with intention.<br>Crafted in our Guangdong workshop.</p><div class="footer__social"><a href="#">IG</a><a href="#">PI</a><a href="#">RED</a></div></div>
+        <div class="footer__col"><h4 class="footer__heading">Products</h4><ul class="footer__links"><li><a href="seating.html">Sofas &amp; Armchairs</a></li><li><a href="dining.html">Dining</a></li><li><a href="bedroom.html">Beds</a></li><li><a href="storage.html">Storage &amp; Tables</a></li><li><a href="sendayi.html">森怡大时</a></li></ul></div>
+        <div class="footer__col"><h4 class="footer__heading">Company</h4><ul class="footer__links"><li><a href="about.html">About</a></li><li><a href="factory.html">Factory Tour</a></li><li><a href="partners.html">Partners</a></li><li><a href="mailto:hello@simier.top">Contact</a></li></ul></div>
+        <div class="footer__col"><h4 class="footer__heading">Support</h4><ul class="footer__links"><li><a href="mailto:hello@simier.top">Shipping &amp; Returns</a></li><li><a href="mailto:hello@simier.top">Care Guide</a></li><li><a href="mailto:hello@simier.top">Trade Program</a></li><li><a href="mailto:hello@simier.top">Custom Orders</a></li></ul></div>
       </div>
-      <div class="footer__bottom">
-        <p>&copy; 2026 Guangdong SIMIER Home Furnishing Co., Ltd. All rights reserved.</p>
-        <p class="footer__location">Foshan, Guangdong, China — Sud de la France — California — Istanbul</p>
-      </div>
+      <div class="footer__bottom"><p>&copy; 2026 Guangdong SIMIER Home Furnishing Co., Ltd. All rights reserved.</p><p class="footer__location">Foshan, Guangdong, China &mdash; Sud de la France &mdash; California &mdash; Istanbul</p></div>
     </div>
   </footer>
 
-  <!-- ====== CHAT WIDGET ====== -->
   <div class="chat-widget" id="chatWidget">
-    <button class="chat-widget__bubble" id="chatBubble" aria-label="Chat with us">
-      <span class="chat-widget__emoji">💬</span>
-      <span class="chat-widget__pulse"></span>
-    </button>
-    <div class="chat-widget__panel" id="chatPanel">
-      <div class="chat-widget__header">
-        <div class="chat-widget__avatar">🛋️</div>
-        <div>
-          <p class="chat-widget__name">SIMIER Assistant</p>
-          <p class="chat-widget__status">Online · Ready to help</p>
-        </div>
-        <button class="chat-widget__close" id="chatClose">&times;</button>
-      </div>
-      <div class="chat-widget__messages" id="chatMessages">
-        <div class="chat-widget__msg chat-widget__msg--bot">
-          <p data-i18n="factory.chat.greeting">Hey there! 👋 I'm your SIMIER design assistant. Ask me about our factory, craftsmanship, materials — or anything else!</p>
-        </div>
-      </div>
-      <div class="chat-widget__quick" id="chatQuick">
-        <button class="chat-widget__quick-btn" data-q="Can I visit the factory?" data-i18n="factory.chat.q1">🏭 Can I visit the factory?</button>
-        <button class="chat-widget__quick-btn" data-q="What materials do you use?" data-i18n="factory.chat.q2">🪵 What materials do you use?</button>
-        <button class="chat-widget__quick-btn" data-q="How long does shipping take?" data-i18n="factory.chat.q3">🚚 Shipping time?</button>
-      </div>
-      <form class="chat-widget__input" id="chatInputForm">
-        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off">
-        <button type="submit">➤</button>
-      </form>
-    </div>
+    <button class="chat-widget__bubble" id="chatBubble"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></button>
+    <div class="chat-widget__panel" id="chatPanel"><div class="chat-widget__header"><span>SIMIER Assistant</span><button class="chat-widget__close" id="chatClose">&times;</button></div><div class="chat-widget__messages" id="chatMessages"><div class="chat-widget__msg chat-widget__msg--bot" data-i18n="factory.chat.greeting">Hi there! 👋 I am your SIMIER assistant. Ask me anything about our workshop, materials, or custom orders.</div></div><form class="chat-widget__input" id="chatInputForm"><input type="text" id="chatInput" placeholder="Type your question&hellip;"><button type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></form></div>
   </div>
 
   <script src="../js/main.js"></script>
   <script src="../js/cart.js"></script>
   <script src="../js/i18n.js"></script>
   <script src="../js/chat.js"></script>
-
-  <!-- ====== LAZY LOAD BACKGROUND IMAGES ====== -->
-  <script>
-  (function() {
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var bg = el.getAttribute('data-bg');
-          if (bg) {
-            el.style.backgroundImage = 'url(' + bg + ')';
-            el.removeAttribute('data-bg');
-            el.classList.add('lazy-loaded');
-          }
-          observer.unobserve(el);
-        }
-      });
-    }, { rootMargin: '300px' });
-
-    document.querySelectorAll('.lazy-bg').forEach(function(el) {
-      observer.observe(el);
-    });
-  })();
-  </script>
 </body>
 </html>
